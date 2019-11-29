@@ -55,10 +55,10 @@ namespace raporkuAPP
                 {
                     MessageBox.Show("Isi Username Anda");
                 }
-                //else if (textBox_passw.Text == "")
-                //{
-                //    MessageBox.Show("Isi Password Anda");
-                //}
+                else if (textBox_passw.Text == "")
+                {
+                    MessageBox.Show("Isi Password Anda");
+                }
                 else
                 {
                     MessageBox.Show("Username atau Password anda salah!!!");
