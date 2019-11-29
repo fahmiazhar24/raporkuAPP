@@ -38,6 +38,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.btSave = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.button_update = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -126,14 +127,26 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(240, 150);
+            this.dataGridView1.Size = new System.Drawing.Size(614, 150);
             this.dataGridView1.TabIndex = 9;
+            this.dataGridView1.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentDoubleClick);
+            // 
+            // button_update
+            // 
+            this.button_update.Location = new System.Drawing.Point(253, 362);
+            this.button_update.Name = "button_update";
+            this.button_update.Size = new System.Drawing.Size(75, 23);
+            this.button_update.TabIndex = 10;
+            this.button_update.Text = "Update";
+            this.button_update.UseVisualStyleBackColor = true;
+            this.button_update.Click += new System.EventHandler(this.button_update_Click);
             // 
             // formInputAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(782, 753);
+            this.Controls.Add(this.button_update);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btSave);
             this.Controls.Add(this.label4);
@@ -164,5 +177,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btSave;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button button_update;
     }
 }
