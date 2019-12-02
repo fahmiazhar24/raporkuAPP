@@ -34,12 +34,14 @@
             this.btInputWali = new System.Windows.Forms.Button();
             this.inputDataWali1 = new raporkuAPP.inputDataWali();
             this.inputDataSiswa1 = new raporkuAPP.inputDataSiswa();
+            this.btOut = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(148)))), ((int)(((byte)(214)))));
+            this.panel1.Controls.Add(this.btOut);
             this.panel1.Controls.Add(this.sidePanel);
             this.panel1.Controls.Add(this.btInputSiswa);
             this.panel1.Controls.Add(this.btInputWali);
@@ -101,6 +103,18 @@
             this.inputDataSiswa1.Size = new System.Drawing.Size(500, 600);
             this.inputDataSiswa1.TabIndex = 2;
             // 
+            // btOut
+            // 
+            this.btOut.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(251)))), ((int)(((byte)(119)))));
+            this.btOut.Font = new System.Drawing.Font("Quantify", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btOut.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(148)))), ((int)(((byte)(214)))));
+            this.btOut.Location = new System.Drawing.Point(17, 683);
+            this.btOut.Name = "btOut";
+            this.btOut.Size = new System.Drawing.Size(160, 44);
+            this.btOut.TabIndex = 31;
+            this.btOut.Text = "LOGOUT";
+            this.btOut.UseVisualStyleBackColor = false;
+            // 
             // formAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -125,5 +139,6 @@
         private System.Windows.Forms.Button btInputSiswa;
         private System.Windows.Forms.Button btInputWali;
         private inputDataSiswa inputDataSiswa1;
+        private System.Windows.Forms.Button btOut;
     }
 }
