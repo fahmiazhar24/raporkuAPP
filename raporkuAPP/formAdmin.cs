@@ -35,6 +35,7 @@ namespace raporkuAPP
         {
             sidePanel.Height = btInputSiswa.Height;
             sidePanel.Top = btInputSiswa.Top;
+            inputDataSiswa1.BringToFront();
         }
 
     }

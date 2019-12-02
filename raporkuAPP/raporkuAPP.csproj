@@ -82,6 +82,12 @@
     <Compile Include="formMain.Designer.cs">
       <DependentUpon>formMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="inputDataSiswa.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="inputDataSiswa.Designer.cs">
+      <DependentUpon>inputDataSiswa.cs</DependentUpon>
+    </Compile>
     <Compile Include="inputDataWali.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -116,6 +122,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="formMain.resx">
       <DependentUpon>formMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="inputDataSiswa.resx">
+      <DependentUpon>inputDataSiswa.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="inputDataWali.resx">
       <DependentUpon>inputDataWali.cs</DependentUpon>

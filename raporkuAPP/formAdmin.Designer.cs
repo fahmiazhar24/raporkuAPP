@@ -29,10 +29,11 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.inputDataWali1 = new raporkuAPP.inputDataWali();
-            this.btInputWali = new System.Windows.Forms.Button();
-            this.btInputSiswa = new System.Windows.Forms.Button();
             this.sidePanel = new System.Windows.Forms.Panel();
+            this.btInputSiswa = new System.Windows.Forms.Button();
+            this.btInputWali = new System.Windows.Forms.Button();
+            this.inputDataWali1 = new raporkuAPP.inputDataWali();
+            this.inputDataSiswa1 = new raporkuAPP.inputDataSiswa();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -48,27 +49,13 @@
             this.panel1.Size = new System.Drawing.Size(200, 753);
             this.panel1.TabIndex = 0;
             // 
-            // inputDataWali1
+            // sidePanel
             // 
-            this.inputDataWali1.Location = new System.Drawing.Point(238, 40);
-            this.inputDataWali1.Name = "inputDataWali1";
-            this.inputDataWali1.Size = new System.Drawing.Size(500, 600);
-            this.inputDataWali1.TabIndex = 1;
-            // 
-            // btInputWali
-            // 
-            this.btInputWali.FlatAppearance.BorderSize = 0;
-            this.btInputWali.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btInputWali.Font = new System.Drawing.Font("Quantify", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btInputWali.ForeColor = System.Drawing.Color.White;
-            this.btInputWali.Location = new System.Drawing.Point(17, 80);
-            this.btInputWali.Name = "btInputWali";
-            this.btInputWali.Size = new System.Drawing.Size(183, 54);
-            this.btInputWali.TabIndex = 2;
-            this.btInputWali.Text = "Input Data Wali Kelas";
-            this.btInputWali.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btInputWali.UseVisualStyleBackColor = true;
-            this.btInputWali.Click += new System.EventHandler(this.button1_Click);
+            this.sidePanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(251)))), ((int)(((byte)(119)))));
+            this.sidePanel.Location = new System.Drawing.Point(0, 72);
+            this.sidePanel.Name = "sidePanel";
+            this.sidePanel.Size = new System.Drawing.Size(17, 65);
+            this.sidePanel.TabIndex = 2;
             // 
             // btInputSiswa
             // 
@@ -85,13 +72,34 @@
             this.btInputSiswa.UseVisualStyleBackColor = true;
             this.btInputSiswa.Click += new System.EventHandler(this.btInputSiswa_Click);
             // 
-            // sidePanel
+            // btInputWali
             // 
-            this.sidePanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(251)))), ((int)(((byte)(119)))));
-            this.sidePanel.Location = new System.Drawing.Point(0, 72);
-            this.sidePanel.Name = "sidePanel";
-            this.sidePanel.Size = new System.Drawing.Size(17, 65);
-            this.sidePanel.TabIndex = 2;
+            this.btInputWali.FlatAppearance.BorderSize = 0;
+            this.btInputWali.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btInputWali.Font = new System.Drawing.Font("Quantify", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btInputWali.ForeColor = System.Drawing.Color.White;
+            this.btInputWali.Location = new System.Drawing.Point(17, 80);
+            this.btInputWali.Name = "btInputWali";
+            this.btInputWali.Size = new System.Drawing.Size(183, 54);
+            this.btInputWali.TabIndex = 2;
+            this.btInputWali.Text = "Input Data Wali Kelas";
+            this.btInputWali.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btInputWali.UseVisualStyleBackColor = true;
+            this.btInputWali.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // inputDataWali1
+            // 
+            this.inputDataWali1.Location = new System.Drawing.Point(238, 40);
+            this.inputDataWali1.Name = "inputDataWali1";
+            this.inputDataWali1.Size = new System.Drawing.Size(500, 600);
+            this.inputDataWali1.TabIndex = 1;
+            // 
+            // inputDataSiswa1
+            // 
+            this.inputDataSiswa1.Location = new System.Drawing.Point(238, 80);
+            this.inputDataSiswa1.Name = "inputDataSiswa1";
+            this.inputDataSiswa1.Size = new System.Drawing.Size(500, 600);
+            this.inputDataSiswa1.TabIndex = 2;
             // 
             // formAdmin
             // 
@@ -100,6 +108,7 @@
             this.ClientSize = new System.Drawing.Size(782, 753);
             this.Controls.Add(this.inputDataWali1);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.inputDataSiswa1);
             this.Name = "formAdmin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "formAdmin";
@@ -115,5 +124,6 @@
         private System.Windows.Forms.Panel sidePanel;
         private System.Windows.Forms.Button btInputSiswa;
         private System.Windows.Forms.Button btInputWali;
+        private inputDataSiswa inputDataSiswa1;
     }
 }
