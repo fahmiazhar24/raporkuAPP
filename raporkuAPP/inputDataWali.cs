@@ -1,29 +1,36 @@
-﻿using Newtonsoft.Json;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
 using System.Drawing;
+using System.Data;
 using System.Linq;
-using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Net;
+using Newtonsoft.Json;
 
 namespace raporkuAPP
 {
-    public partial class formInputAdmin : Form
+    public partial class inputDataWali : UserControl
     {
         string idwk, nama, user, pass, Kelas;
+        //public static string SetValueForID = "";
+        //public static string SetValueForNama = "";
+        //public static string SetValueForUser = "";
+        //public static string SetValueForPass = "";
+        //public static string SetValueForKelas = "";
         public static String baseUri = "http://localhost:1313/Service1.svc/";
-        
-        public formInputAdmin()
+        public inputDataWali()
         {
             InitializeComponent();
 
             namaWali_TB.Text = "";
 
-            getData();
+            //formAdmin data = new formAdmin();
+            //data.getData();
+
+            //dataGridView1.DataSource = source;
         }
 
         private void getData()
@@ -47,6 +54,19 @@ namespace raporkuAPP
             //client.UploadString(baseUri + "adddata", request);
             string response = client.UploadString(baseUri + "adddataWaliKelas", request);
             MessageBox.Show(response);
+        }
+
+        private void btShow_Click(object sender, EventArgs e)
+        {
+            List<WaliKelas> walis = new List<WaliKelas>();
+
+            String result = new WebClient().DownloadString(baseUri + "dataWaliKelas");
+
+            walis = JsonConvert.DeserializeObject<List<WaliKelas>>(result);
+
+            var bindingList = new BindingList<WaliKelas>(walis);
+            var source = new BindingSource(bindingList, null);
+            dataGridView1.DataSource = source;
         }
 
         static void updateData(WaliKelas wali)
@@ -103,7 +123,7 @@ namespace raporkuAPP
             {
                 Kelas = "IPS";
             }
-            
+
         }
 
         private void button_update_Click(object sender, EventArgs e)
@@ -128,13 +148,13 @@ namespace raporkuAPP
         }
     }
 
-    //public class WaliKelas
-    //{
-        
-    //    public string id_walikelas { get; set; }
-    //    public string nama_walikelas { get; set; }
-    //    public string uname_walikelas { get; set; }
-    //    public string passw_walikelas { get; set; }
-    //    public string id_kelas { get; set; }
-    //}
+    public class WaliKelas
+    {
+
+        public string id_walikelas { get; set; }
+        public string nama_walikelas { get; set; }
+        public string uname_walikelas { get; set; }
+        public string passw_walikelas { get; set; }
+        public string id_kelas { get; set; }
+    }
 }
