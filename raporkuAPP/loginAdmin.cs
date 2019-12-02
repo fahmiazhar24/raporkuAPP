@@ -35,7 +35,7 @@ namespace raporkuAPP
                 if (textBox_uname.Text == admin.uname_admin && textBox_passw.Text == admin.passw_admin)
                 {
                     MessageBox.Show("Username Benar");
-                    loginAdmin log = new loginAdmin();
+                    formAdmin log = new formAdmin();
                     log.Show();
                     //username = textBox_username.Text;
                     //Welcome welcome = new Welcome();

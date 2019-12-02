@@ -16,7 +16,7 @@ namespace raporkuAPP
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new formInputAdmin());
+            Application.Run(new formMain());
         }
     }
 }
