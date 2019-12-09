@@ -31,21 +31,21 @@
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.kelas_cb = new System.Windows.Forms.ComboBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.walikelas_cb = new System.Windows.Forms.ComboBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.statuskawin_tb = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.agama_cb = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.nomorortu_tb = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.ayah_tb = new System.Windows.Forms.TextBox();
+            this.ibu_tb = new System.Windows.Forms.TextBox();
+            this.alamat_tb = new System.Windows.Forms.TextBox();
             this.btShow = new System.Windows.Forms.Button();
             this.button_update = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -54,10 +54,10 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.Kelas_CB = new System.Windows.Forms.ComboBox();
-            this.passWali_TB = new System.Windows.Forms.TextBox();
-            this.userWali_TB = new System.Windows.Forms.TextBox();
-            this.namaWali_TB = new System.Windows.Forms.TextBox();
+            this.jeniskelamin_CB = new System.Windows.Forms.ComboBox();
+            this.tempatlahir_TB = new System.Windows.Forms.TextBox();
+            this.namaSiswa_TB = new System.Windows.Forms.TextBox();
+            this.tglLahir_DTP = new System.Windows.Forms.DateTimePicker();
             this.flowLayoutPanel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -77,22 +77,23 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.tglLahir_DTP);
             this.groupBox1.Controls.Add(this.label12);
-            this.groupBox1.Controls.Add(this.comboBox3);
+            this.groupBox1.Controls.Add(this.kelas_cb);
             this.groupBox1.Controls.Add(this.label11);
-            this.groupBox1.Controls.Add(this.comboBox2);
+            this.groupBox1.Controls.Add(this.walikelas_cb);
             this.groupBox1.Controls.Add(this.label10);
-            this.groupBox1.Controls.Add(this.textBox5);
+            this.groupBox1.Controls.Add(this.statuskawin_tb);
             this.groupBox1.Controls.Add(this.label9);
-            this.groupBox1.Controls.Add(this.comboBox1);
+            this.groupBox1.Controls.Add(this.agama_cb);
             this.groupBox1.Controls.Add(this.label8);
-            this.groupBox1.Controls.Add(this.textBox4);
+            this.groupBox1.Controls.Add(this.nomorortu_tb);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Controls.Add(this.textBox1);
-            this.groupBox1.Controls.Add(this.textBox2);
-            this.groupBox1.Controls.Add(this.textBox3);
+            this.groupBox1.Controls.Add(this.ayah_tb);
+            this.groupBox1.Controls.Add(this.ibu_tb);
+            this.groupBox1.Controls.Add(this.alamat_tb);
             this.groupBox1.Controls.Add(this.btShow);
             this.groupBox1.Controls.Add(this.button_update);
             this.groupBox1.Controls.Add(this.dataGridView1);
@@ -101,10 +102,9 @@
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.Kelas_CB);
-            this.groupBox1.Controls.Add(this.passWali_TB);
-            this.groupBox1.Controls.Add(this.userWali_TB);
-            this.groupBox1.Controls.Add(this.namaWali_TB);
+            this.groupBox1.Controls.Add(this.jeniskelamin_CB);
+            this.groupBox1.Controls.Add(this.tempatlahir_TB);
+            this.groupBox1.Controls.Add(this.namaSiswa_TB);
             this.groupBox1.Location = new System.Drawing.Point(3, 3);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(471, 1016);
@@ -117,24 +117,24 @@
             this.label12.AutoSize = true;
             this.label12.Location = new System.Drawing.Point(37, 599);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(74, 17);
+            this.label12.Size = new System.Drawing.Size(43, 17);
             this.label12.TabIndex = 49;
-            this.label12.Text = "Wali Kelas";
+            this.label12.Text = "Kelas";
             // 
-            // comboBox3
+            // kelas_cb
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Items.AddRange(new object[] {
+            this.kelas_cb.FormattingEnabled = true;
+            this.kelas_cb.Items.AddRange(new object[] {
             "ISLAM",
             "KATHOLIK",
             "PROTESTAN",
             "HINDU",
             "BUDHA",
             "KONGHUCHU"});
-            this.comboBox3.Location = new System.Drawing.Point(161, 599);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(301, 24);
-            this.comboBox3.TabIndex = 48;
+            this.kelas_cb.Location = new System.Drawing.Point(161, 599);
+            this.kelas_cb.Name = "kelas_cb";
+            this.kelas_cb.Size = new System.Drawing.Size(301, 24);
+            this.kelas_cb.TabIndex = 48;
             // 
             // label11
             // 
@@ -145,17 +145,17 @@
             this.label11.TabIndex = 47;
             this.label11.Text = "Wali Kelas";
             // 
-            // comboBox2
+            // walikelas_cb
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
+            this.walikelas_cb.FormattingEnabled = true;
+            this.walikelas_cb.Items.AddRange(new object[] {
             "FAHMI AZHAR ISKANDAR",
             "ARIDITYA NUROKHIM",
             "M. THORIQ FADLULLAH"});
-            this.comboBox2.Location = new System.Drawing.Point(161, 561);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(301, 24);
-            this.comboBox2.TabIndex = 46;
+            this.walikelas_cb.Location = new System.Drawing.Point(161, 561);
+            this.walikelas_cb.Name = "walikelas_cb";
+            this.walikelas_cb.Size = new System.Drawing.Size(301, 24);
+            this.walikelas_cb.TabIndex = 46;
             // 
             // label10
             // 
@@ -166,12 +166,12 @@
             this.label10.TabIndex = 45;
             this.label10.Text = "Status Kawin";
             // 
-            // textBox5
+            // statuskawin_tb
             // 
-            this.textBox5.Location = new System.Drawing.Point(161, 523);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(301, 22);
-            this.textBox5.TabIndex = 44;
+            this.statuskawin_tb.Location = new System.Drawing.Point(161, 523);
+            this.statuskawin_tb.Name = "statuskawin_tb";
+            this.statuskawin_tb.Size = new System.Drawing.Size(301, 22);
+            this.statuskawin_tb.TabIndex = 44;
             // 
             // label9
             // 
@@ -182,20 +182,20 @@
             this.label9.TabIndex = 43;
             this.label9.Text = "Agama";
             // 
-            // comboBox1
+            // agama_cb
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.agama_cb.FormattingEnabled = true;
+            this.agama_cb.Items.AddRange(new object[] {
             "ISLAM",
             "KATHOLIK",
             "PROTESTAN",
             "HINDU",
             "BUDHA",
             "KONGHUCHU"});
-            this.comboBox1.Location = new System.Drawing.Point(161, 356);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(301, 24);
-            this.comboBox1.TabIndex = 42;
+            this.agama_cb.Location = new System.Drawing.Point(161, 356);
+            this.agama_cb.Name = "agama_cb";
+            this.agama_cb.Size = new System.Drawing.Size(301, 24);
+            this.agama_cb.TabIndex = 42;
             // 
             // label8
             // 
@@ -206,12 +206,12 @@
             this.label8.TabIndex = 41;
             this.label8.Text = "Nomor Orangtua";
             // 
-            // textBox4
+            // nomorortu_tb
             // 
-            this.textBox4.Location = new System.Drawing.Point(161, 484);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(301, 22);
-            this.textBox4.TabIndex = 40;
+            this.nomorortu_tb.Location = new System.Drawing.Point(161, 484);
+            this.nomorortu_tb.Name = "nomorortu_tb";
+            this.nomorortu_tb.Size = new System.Drawing.Size(301, 22);
+            this.nomorortu_tb.TabIndex = 40;
             // 
             // label5
             // 
@@ -240,27 +240,27 @@
             this.label7.TabIndex = 37;
             this.label7.Text = "Alamat";
             // 
-            // textBox1
+            // ayah_tb
             // 
-            this.textBox1.Location = new System.Drawing.Point(161, 443);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(301, 22);
-            this.textBox1.TabIndex = 36;
+            this.ayah_tb.Location = new System.Drawing.Point(161, 443);
+            this.ayah_tb.Name = "ayah_tb";
+            this.ayah_tb.Size = new System.Drawing.Size(301, 22);
+            this.ayah_tb.TabIndex = 36;
             // 
-            // textBox2
+            // ibu_tb
             // 
-            this.textBox2.Location = new System.Drawing.Point(161, 400);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(301, 22);
-            this.textBox2.TabIndex = 35;
+            this.ibu_tb.Location = new System.Drawing.Point(161, 400);
+            this.ibu_tb.Name = "ibu_tb";
+            this.ibu_tb.Size = new System.Drawing.Size(301, 22);
+            this.ibu_tb.TabIndex = 35;
             // 
-            // textBox3
+            // alamat_tb
             // 
-            this.textBox3.Location = new System.Drawing.Point(161, 251);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(301, 84);
-            this.textBox3.TabIndex = 34;
+            this.alamat_tb.Location = new System.Drawing.Point(161, 251);
+            this.alamat_tb.Multiline = true;
+            this.alamat_tb.Name = "alamat_tb";
+            this.alamat_tb.Size = new System.Drawing.Size(301, 84);
+            this.alamat_tb.TabIndex = 34;
             // 
             // btShow
             // 
@@ -299,6 +299,7 @@
             this.btSave.TabIndex = 30;
             this.btSave.Text = "Save";
             this.btSave.UseVisualStyleBackColor = true;
+            this.btSave.Click += new System.EventHandler(this.btSave_Click);
             // 
             // label4
             // 
@@ -336,37 +337,37 @@
             this.label1.TabIndex = 26;
             this.label1.Text = "Nama Lengkap";
             // 
-            // Kelas_CB
+            // jeniskelamin_CB
             // 
-            this.Kelas_CB.FormattingEnabled = true;
-            this.Kelas_CB.Items.AddRange(new object[] {
+            this.jeniskelamin_CB.FormattingEnabled = true;
+            this.jeniskelamin_CB.Items.AddRange(new object[] {
             "LAKI-LAKI",
             "PEREMPUAN"});
-            this.Kelas_CB.Location = new System.Drawing.Point(161, 206);
-            this.Kelas_CB.Name = "Kelas_CB";
-            this.Kelas_CB.Size = new System.Drawing.Size(301, 24);
-            this.Kelas_CB.TabIndex = 25;
+            this.jeniskelamin_CB.Location = new System.Drawing.Point(161, 206);
+            this.jeniskelamin_CB.Name = "jeniskelamin_CB";
+            this.jeniskelamin_CB.Size = new System.Drawing.Size(301, 24);
+            this.jeniskelamin_CB.TabIndex = 25;
             // 
-            // passWali_TB
+            // tempatlahir_TB
             // 
-            this.passWali_TB.Location = new System.Drawing.Point(161, 160);
-            this.passWali_TB.Name = "passWali_TB";
-            this.passWali_TB.Size = new System.Drawing.Size(301, 22);
-            this.passWali_TB.TabIndex = 24;
+            this.tempatlahir_TB.Location = new System.Drawing.Point(161, 110);
+            this.tempatlahir_TB.Name = "tempatlahir_TB";
+            this.tempatlahir_TB.Size = new System.Drawing.Size(301, 22);
+            this.tempatlahir_TB.TabIndex = 23;
             // 
-            // userWali_TB
+            // namaSiswa_TB
             // 
-            this.userWali_TB.Location = new System.Drawing.Point(161, 110);
-            this.userWali_TB.Name = "userWali_TB";
-            this.userWali_TB.Size = new System.Drawing.Size(301, 22);
-            this.userWali_TB.TabIndex = 23;
+            this.namaSiswa_TB.Location = new System.Drawing.Point(161, 69);
+            this.namaSiswa_TB.Name = "namaSiswa_TB";
+            this.namaSiswa_TB.Size = new System.Drawing.Size(301, 22);
+            this.namaSiswa_TB.TabIndex = 22;
             // 
-            // namaWali_TB
+            // tglLahir_DTP
             // 
-            this.namaWali_TB.Location = new System.Drawing.Point(161, 69);
-            this.namaWali_TB.Name = "namaWali_TB";
-            this.namaWali_TB.Size = new System.Drawing.Size(301, 22);
-            this.namaWali_TB.TabIndex = 22;
+            this.tglLahir_DTP.Location = new System.Drawing.Point(161, 155);
+            this.tglLahir_DTP.Name = "tglLahir_DTP";
+            this.tglLahir_DTP.Size = new System.Drawing.Size(301, 22);
+            this.tglLahir_DTP.TabIndex = 50;
             // 
             // inputDataSiswa
             // 
@@ -395,25 +396,25 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox Kelas_CB;
-        private System.Windows.Forms.TextBox passWali_TB;
-        private System.Windows.Forms.TextBox userWali_TB;
-        private System.Windows.Forms.TextBox namaWali_TB;
+        private System.Windows.Forms.ComboBox jeniskelamin_CB;
+        private System.Windows.Forms.TextBox tempatlahir_TB;
+        private System.Windows.Forms.TextBox namaSiswa_TB;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.ComboBox kelas_cb;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox walikelas_cb;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox statuskawin_tb;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox agama_cb;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox nomorortu_tb;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox ayah_tb;
+        private System.Windows.Forms.TextBox ibu_tb;
+        private System.Windows.Forms.TextBox alamat_tb;
+        private System.Windows.Forms.DateTimePicker tglLahir_DTP;
     }
 }
