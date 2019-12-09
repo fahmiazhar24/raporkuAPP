@@ -76,5 +76,12 @@ namespace raporkuAPP
             public string uname_admin { get; set; }
             public string passw_admin { get; set; }
         }
+
+        private void button_back_Click(object sender, EventArgs e)
+        {
+            formMain formMain = new formMain();
+            formMain.Show();
+            this.Hide();
+        }
     }
 }
