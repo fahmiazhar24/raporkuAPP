@@ -111,6 +111,7 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "DATA_SISWA";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // tglLahir_DTP
             // 
@@ -159,6 +160,7 @@
             this.walikelas_cb.Name = "walikelas_cb";
             this.walikelas_cb.Size = new System.Drawing.Size(301, 24);
             this.walikelas_cb.TabIndex = 46;
+            this.walikelas_cb.Click += new System.EventHandler(this.walikelas_cb_Click);
             // 
             // label10
             // 

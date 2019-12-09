@@ -14,7 +14,7 @@ namespace raporkuAPP
 {
     public partial class loginAdmin : Form
     {
-        public static String baseUri = Data.Uri;
+        public static String baseUri = "http://192.168.100.79/RaporService/Service1.svc/";
         public loginAdmin()
         {
             InitializeComponent();

@@ -18,12 +18,12 @@ namespace raporkuAPP
         public inputDataSiswa()
         {
             InitializeComponent();
-            WaliKelas waliKelas = new WaliKelas();
-            String result = new WebClient().DownloadString(baseUri + "dataWaliKelas");
-            DataSet dataSet = new DataSet();
-            walikelas_cb.DataSource = dataSet.Tables[1];
-            walikelas_cb.DisplayMember = "walikelas";
-            walikelas_cb.ValueMember = "Nama_Wali_Kelas";
+            //WaliKelas waliKelas = new WaliKelas();
+            //String result = new WebClient().DownloadString(baseUri + "dataWaliKelas");
+            //DataSet dataSet = new DataSet();
+            //walikelas_cb.DataSource = dataSet.Tables[1];
+            //walikelas_cb.DisplayMember = "walikelas";
+            //walikelas_cb.ValueMember = "Nama_Wali_Kelas";
         }
 
         private void getData()
@@ -98,6 +98,21 @@ namespace raporkuAPP
 
             addData(siswa);
             getData();
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void walikelas_cb_Click(object sender, EventArgs e)
+        {
+            WaliKelas waliKelas = new WaliKelas();
+            String result = new WebClient().DownloadString(baseUri + "dataWaliKelas");
+            DataSet dataSet = new DataSet();
+            walikelas_cb.DataSource = dataSet.Tables[1];
+            walikelas_cb.DisplayMember = "walikelas";
+            walikelas_cb.ValueMember = "Nama_Wali_Kelas";
         }
     }
 
