@@ -26,7 +26,9 @@ namespace raporkuAPP
 
         private void btDataSiswa_Click(object sender, EventArgs e)
         {
-
+            dataSiswa ds = new dataSiswa();
+            ds.Show();
+            this.Hide();
         }
 
         private void btInputRapor_Click(object sender, EventArgs e)
