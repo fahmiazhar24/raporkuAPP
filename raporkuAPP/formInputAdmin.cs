@@ -15,7 +15,7 @@ namespace raporkuAPP
     public partial class formInputAdmin : Form
     {
         string idwk, nama, user, pass, Kelas;
-        public static String baseUri = "http://localhost:1313/Service1.svc/";
+        public static String baseUri = Data.Uri;
         
         public formInputAdmin()
         {
