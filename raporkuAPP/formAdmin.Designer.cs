@@ -75,7 +75,7 @@
             // 
             this.btInputSiswa.FlatAppearance.BorderSize = 0;
             this.btInputSiswa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btInputSiswa.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btInputSiswa.Font = new System.Drawing.Font("Quantify", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btInputSiswa.ForeColor = System.Drawing.Color.White;
             this.btInputSiswa.Location = new System.Drawing.Point(17, 140);
             this.btInputSiswa.Name = "btInputSiswa";
@@ -90,7 +90,7 @@
             // 
             this.btInputWali.FlatAppearance.BorderSize = 0;
             this.btInputWali.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btInputWali.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btInputWali.Font = new System.Drawing.Font("Quantify", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btInputWali.ForeColor = System.Drawing.Color.White;
             this.btInputWali.Location = new System.Drawing.Point(17, 80);
             this.btInputWali.Name = "btInputWali";

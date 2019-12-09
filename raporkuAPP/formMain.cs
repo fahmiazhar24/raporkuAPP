@@ -41,7 +41,9 @@ namespace raporkuAPP
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            menuWali wal = new menuWali();
+            wal.Show();
+            this.Hide();
         }
     }
 }
