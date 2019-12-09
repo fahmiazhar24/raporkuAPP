@@ -37,6 +37,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.textBox_uname = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.button_back = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button2
@@ -125,9 +126,22 @@
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(148)))), ((int)(((byte)(214)))));
             this.label1.Location = new System.Drawing.Point(96, 176);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(390, 64);
+            this.label1.Size = new System.Drawing.Size(407, 69);
             this.label1.TabIndex = 24;
             this.label1.Text = "LOGIN ADMIN";
+            // 
+            // button_back
+            // 
+            this.button_back.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(251)))), ((int)(((byte)(119)))));
+            this.button_back.Font = new System.Drawing.Font("Quantify", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_back.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(148)))), ((int)(((byte)(214)))));
+            this.button_back.Location = new System.Drawing.Point(269, 534);
+            this.button_back.Name = "button_back";
+            this.button_back.Size = new System.Drawing.Size(160, 44);
+            this.button_back.TabIndex = 32;
+            this.button_back.Text = "BACK";
+            this.button_back.UseVisualStyleBackColor = false;
+            this.button_back.Click += new System.EventHandler(this.button_back_Click);
             // 
             // loginAdmin
             // 
@@ -136,6 +150,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(782, 753);
+            this.Controls.Add(this.button_back);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.checkBox1);
@@ -163,5 +178,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox_uname;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button_back;
     }
 }

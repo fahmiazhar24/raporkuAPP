@@ -13,6 +13,7 @@ namespace raporkuAPP
 {
     public partial class formMain : Form
     {
+        public static String baseUri = Data.Uri;
         public formMain()
         {
             Thread t = new Thread(new ThreadStart(StartForm));
