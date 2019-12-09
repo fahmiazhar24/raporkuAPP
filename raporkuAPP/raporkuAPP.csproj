@@ -65,6 +65,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Data.cs" />
+    <Compile Include="dataSiswa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dataSiswa.Designer.cs">
+      <DependentUpon>dataSiswa.cs</DependentUpon>
+    </Compile>
     <Compile Include="formAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -115,6 +121,9 @@
     <Compile Include="splashScreen.Designer.cs">
       <DependentUpon>splashScreen.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="dataSiswa.resx">
+      <DependentUpon>dataSiswa.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="formAdmin.resx">
       <DependentUpon>formAdmin.cs</DependentUpon>
     </EmbeddedResource>
@@ -180,6 +189,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\BACK_raporku1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Data Siswa.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

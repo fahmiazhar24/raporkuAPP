@@ -73,6 +73,16 @@ namespace raporkuAPP.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Data_Siswa {
+            get {
+                object obj = ResourceManager.GetObject("Data Siswa", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap splashScreen_raporku {
             get {
                 object obj = ResourceManager.GetObject("splashScreen_raporku", resourceCulture);
