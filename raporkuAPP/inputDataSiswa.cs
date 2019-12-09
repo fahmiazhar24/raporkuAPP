@@ -18,6 +18,12 @@ namespace raporkuAPP
         public inputDataSiswa()
         {
             InitializeComponent();
+            WaliKelas waliKelas = new WaliKelas();
+            String result = new WebClient().DownloadString(baseUri + "dataWaliKelas");
+            DataSet dataSet = new DataSet();
+            walikelas_cb.DataSource = dataSet.Tables[1];
+            walikelas_cb.DisplayMember = "walikelas";
+            walikelas_cb.ValueMember = "Nama_Wali_Kelas";
         }
 
         private void getData()
@@ -71,27 +77,26 @@ namespace raporkuAPP
             Siswa siswa = new Siswa();
             siswa.nama_siswa = namaSiswa_TB.Text;
             siswa.tempat_lahir = tempatlahir_TB.Text;
-            siswa.tgl_lahir = passWali_TB.Text;
-            siswa.jenis_kelamin = namaSiswa_TB.Text;
-            siswa.alamat = tempatlahir_TB.Text;
-            siswa.nama_agama = passWali_TB.Text;
-            siswa.nama_ibu = namaSiswa_TB.Text;
-            siswa.nama_ayah = tempatlahir_TB.Text;
-            siswa.nomor_ortu = passWali_TB.Text;
-            siswa.status_kawin = namaSiswa_TB.Text;
-            siswa.id_walikelas = tempatlahir_TB.Text;
-            siswa.id_kelas = passWali_TB.Text;
-
-            if (jeniskelamin_CB.SelectedIndex == 0)
+            siswa.tgl_lahir = tglLahir_DTP.Value.ToString();
+            siswa.jenis_kelamin = jeniskelamin_CB.SelectedItem.ToString();
+            siswa.alamat = alamat_tb.Text;
+            siswa.nama_agama = agama_cb.SelectedItem.ToString();
+            siswa.nama_ibu = ibu_tb.Text;
+            siswa.nama_ayah = ayah_tb.Text;
+            siswa.nomor_ortu = nomorortu_tb.Text;
+            siswa.status_kawin = statuskawin_tb.Text;
+            siswa.id_walikelas = walikelas_cb.SelectedItem.ToString();
+            siswa.id_kelas = kelas_cb.SelectedItem.ToString();
+            if (kelas_cb.SelectedIndex == 0)
             {
-                waliKelas.id_kelas = "1";
+                siswa.id_kelas = "1";
             }
-            else if (jeniskelamin_CB.SelectedIndex == 1)
+            else if (kelas_cb.SelectedIndex == 1)
             {
-                waliKelas.id_kelas = "2";
+                siswa.id_kelas = "2";
             }
 
-            addData(waliKelas);
+            addData(siswa);
             getData();
         }
     }

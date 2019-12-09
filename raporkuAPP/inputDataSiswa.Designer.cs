@@ -30,6 +30,7 @@
         {
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.tglLahir_DTP = new System.Windows.Forms.DateTimePicker();
             this.label12 = new System.Windows.Forms.Label();
             this.kelas_cb = new System.Windows.Forms.ComboBox();
             this.label11 = new System.Windows.Forms.Label();
@@ -57,7 +58,6 @@
             this.jeniskelamin_CB = new System.Windows.Forms.ComboBox();
             this.tempatlahir_TB = new System.Windows.Forms.TextBox();
             this.namaSiswa_TB = new System.Windows.Forms.TextBox();
-            this.tglLahir_DTP = new System.Windows.Forms.DateTimePicker();
             this.flowLayoutPanel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -112,6 +112,13 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "DATA_SISWA";
             // 
+            // tglLahir_DTP
+            // 
+            this.tglLahir_DTP.Location = new System.Drawing.Point(161, 155);
+            this.tglLahir_DTP.Name = "tglLahir_DTP";
+            this.tglLahir_DTP.Size = new System.Drawing.Size(301, 22);
+            this.tglLahir_DTP.TabIndex = 50;
+            // 
             // label12
             // 
             this.label12.AutoSize = true;
@@ -125,12 +132,8 @@
             // 
             this.kelas_cb.FormattingEnabled = true;
             this.kelas_cb.Items.AddRange(new object[] {
-            "ISLAM",
-            "KATHOLIK",
-            "PROTESTAN",
-            "HINDU",
-            "BUDHA",
-            "KONGHUCHU"});
+            "IPA",
+            "IPS"});
             this.kelas_cb.Location = new System.Drawing.Point(161, 599);
             this.kelas_cb.Name = "kelas_cb";
             this.kelas_cb.Size = new System.Drawing.Size(301, 24);
@@ -361,13 +364,6 @@
             this.namaSiswa_TB.Name = "namaSiswa_TB";
             this.namaSiswa_TB.Size = new System.Drawing.Size(301, 22);
             this.namaSiswa_TB.TabIndex = 22;
-            // 
-            // tglLahir_DTP
-            // 
-            this.tglLahir_DTP.Location = new System.Drawing.Point(161, 155);
-            this.tglLahir_DTP.Name = "tglLahir_DTP";
-            this.tglLahir_DTP.Size = new System.Drawing.Size(301, 22);
-            this.tglLahir_DTP.TabIndex = 50;
             // 
             // inputDataSiswa
             // 
