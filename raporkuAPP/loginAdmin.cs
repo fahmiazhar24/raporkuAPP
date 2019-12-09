@@ -34,7 +34,7 @@ namespace raporkuAPP
                 admin = JsonConvert.DeserializeObject<Admin>(result);
                 if (textBox_uname.Text == admin.uname_admin && textBox_passw.Text == admin.passw_admin)
                 {
-                    MessageBox.Show("Username Benar");
+                    //MessageBox.Show("Username Benar");
                     formAdmin log = new formAdmin();
                     log.Show();
                     //username = textBox_username.Text;
@@ -44,7 +44,7 @@ namespace raporkuAPP
                 }
                 else if (textBox_uname.Text != admin.uname_admin && textBox_passw.Text == admin.passw_admin)
                 {
-                    MessageBox.Show("Username Salah");
+                    MessageBox.Show("Username atau Password Salah");
                     //username = textBox_username.Text;
                     //Welcome welcome = new Welcome();
                     //this.Hide();
