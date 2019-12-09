@@ -122,6 +122,10 @@ namespace raporkuAPP
             //walikelas_cb.DataSource = dataSet.Tables[1];
             walikelas_cb.DisplayMember = "nama_walikelas";
             walikelas_cb.ValueMember = "nama_walikelas";
+
+
+
+
         }
     }
 
@@ -153,12 +157,4 @@ namespace raporkuAPP
         
         public string nama_agama { get; set; }
     }
-    //public class WaliKelas
-    //{
-    //    public string id_walikelas { get; set; }
-    //    public string nama_walikelas { get; set; }
-    //    public string uname_walikelas { get; set; }
-    //    public string passw_walikelas { get; set; }
-    //    public string id_kelas { get; set; }
-    //}
 }
