@@ -107,12 +107,21 @@ namespace raporkuAPP
 
         private void walikelas_cb_Click(object sender, EventArgs e)
         {
-            WaliKelas waliKelas = new WaliKelas();
+            List<WaliKelas> wali = new List<WaliKelas>();
+
             String result = new WebClient().DownloadString(baseUri + "dataWaliKelas");
-            DataSet dataSet = new DataSet();
-            walikelas_cb.DataSource = dataSet.Tables[1];
-            walikelas_cb.DisplayMember = "walikelas";
-            walikelas_cb.ValueMember = "Nama_Wali_Kelas";
+
+            wali = JsonConvert.DeserializeObject<List<WaliKelas>>(result);
+
+            var bindingSource1 = new BindingSource();
+            bindingSource1.DataSource = wali;
+
+            walikelas_cb.DataSource = bindingSource1.DataSource;
+
+            //DataSet dataSet = new DataSet();
+            //walikelas_cb.DataSource = dataSet.Tables[1];
+            walikelas_cb.DisplayMember = "nama_walikelas";
+            walikelas_cb.ValueMember = "nama_walikelas";
         }
     }
 
@@ -144,4 +153,12 @@ namespace raporkuAPP
         
         public string nama_agama { get; set; }
     }
+    //public class WaliKelas
+    //{
+    //    public string id_walikelas { get; set; }
+    //    public string nama_walikelas { get; set; }
+    //    public string uname_walikelas { get; set; }
+    //    public string passw_walikelas { get; set; }
+    //    public string id_kelas { get; set; }
+    //}
 }
