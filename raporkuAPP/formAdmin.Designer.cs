@@ -63,13 +63,13 @@
             // 
             this.btInputSiswa.FlatAppearance.BorderSize = 0;
             this.btInputSiswa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btInputSiswa.Font = new System.Drawing.Font("Quantify", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btInputSiswa.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btInputSiswa.ForeColor = System.Drawing.Color.White;
             this.btInputSiswa.Location = new System.Drawing.Point(17, 140);
             this.btInputSiswa.Name = "btInputSiswa";
             this.btInputSiswa.Size = new System.Drawing.Size(183, 54);
             this.btInputSiswa.TabIndex = 3;
-            this.btInputSiswa.Text = "Input Data Siswa";
+            this.btInputSiswa.Text = "Data Siswa";
             this.btInputSiswa.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btInputSiswa.UseVisualStyleBackColor = true;
             this.btInputSiswa.Click += new System.EventHandler(this.btInputSiswa_Click);
@@ -78,13 +78,13 @@
             // 
             this.btInputWali.FlatAppearance.BorderSize = 0;
             this.btInputWali.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btInputWali.Font = new System.Drawing.Font("Quantify", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btInputWali.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btInputWali.ForeColor = System.Drawing.Color.White;
             this.btInputWali.Location = new System.Drawing.Point(17, 80);
             this.btInputWali.Name = "btInputWali";
             this.btInputWali.Size = new System.Drawing.Size(183, 54);
             this.btInputWali.TabIndex = 2;
-            this.btInputWali.Text = "Input Data Wali Kelas";
+            this.btInputWali.Text = "Data Wali Kelas";
             this.btInputWali.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btInputWali.UseVisualStyleBackColor = true;
             this.btInputWali.Click += new System.EventHandler(this.button1_Click);

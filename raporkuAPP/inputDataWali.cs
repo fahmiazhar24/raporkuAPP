@@ -20,7 +20,7 @@ namespace raporkuAPP
         //public static string SetValueForUser = "";
         //public static string SetValueForPass = "";
         //public static string SetValueForKelas = "";
-        public static String baseUri = "http://localhost:1313/Service1.svc/";
+        public static String baseUri = Data.Uri;
         public inputDataWali()
         {
             InitializeComponent();

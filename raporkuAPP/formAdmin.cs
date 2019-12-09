@@ -14,7 +14,6 @@ namespace raporkuAPP
 {
     public partial class formAdmin : Form
     {
-        public static String baseUri = "http://localhost:1313/Service1.svc/";
         public formAdmin()
         {
             InitializeComponent();
