@@ -123,10 +123,8 @@ namespace raporkuAPP
             walikelas_cb.DisplayMember = "nama_walikelas";
             walikelas_cb.ValueMember = "nama_walikelas";
 
-
-
-
         }
+
     }
 
     public class Siswa
