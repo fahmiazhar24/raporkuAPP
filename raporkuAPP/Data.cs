@@ -10,6 +10,15 @@ namespace raporkuAPP
     {
         public static String Uri = "http://192.168.100.79/RaporService/Service1.svc/";
     }
+    public class Rapot
+    {
+        public string nilai { get; set; }
+        public string semester { get; set; }
+        public string id_kelas { get; set; }
+        public string id_mapel { get; set; }
+        public string id_siswa { get; set; }
+        public string id_rapot { get; set; }
+    }
     public class Siswa
     {
         public string tempat_lahir { get; set; }

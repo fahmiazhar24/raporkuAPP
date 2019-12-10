@@ -33,7 +33,9 @@ namespace raporkuAPP
 
         private void btInputRapor_Click(object sender, EventArgs e)
         {
-
+            raporku raporku = new raporku();
+            raporku.Show();
+            this.Hide();
         }
     }
 }
