@@ -15,6 +15,7 @@ namespace raporkuAPP
     public partial class inputDataSiswa : UserControl
     {
         public static String baseUri = Data.Uri;
+        string idsiswa, kelas;
         public inputDataSiswa()
         {
             InitializeComponent();
@@ -78,6 +79,7 @@ namespace raporkuAPP
             siswa.nama_siswa = namaSiswa_TB.Text;
             siswa.tempat_lahir = tempatlahir_TB.Text;
             siswa.tgl_lahir = tglLahir_DTP.Value.ToString();
+            //siswa.tgl_lahir = "11/11/2019";
             siswa.jenis_kelamin = jeniskelamin_CB.SelectedItem.ToString();
             siswa.alamat = alamat_tb.Text;
             siswa.nama_agama = agama_cb.SelectedItem.ToString();
@@ -85,8 +87,8 @@ namespace raporkuAPP
             siswa.nama_ayah = ayah_tb.Text;
             siswa.nomor_ortu = nomorortu_tb.Text;
             siswa.status_kawin = statuskawin_tb.Text;
-            siswa.id_walikelas = walikelas_cb.SelectedItem.ToString();
-            siswa.id_kelas = kelas_cb.SelectedItem.ToString();
+            siswa.id_walikelas = walikelas_cb.SelectedValue.ToString();
+            //siswa.id_kelas = kelas_cb.SelectedItem.ToString();
             if (kelas_cb.SelectedIndex == 0)
             {
                 siswa.id_kelas = "1";
@@ -121,38 +123,67 @@ namespace raporkuAPP
             //DataSet dataSet = new DataSet();
             //walikelas_cb.DataSource = dataSet.Tables[1];
             walikelas_cb.DisplayMember = "nama_walikelas";
-            walikelas_cb.ValueMember = "nama_walikelas";
+            walikelas_cb.ValueMember = "id_walikelas";
 
         }
 
-    }
+        private void button_update_Click(object sender, EventArgs e)
+        {
+            Siswa siswa = new Siswa();
+            siswa.id_siswa = idsiswa;
+            siswa.nama_siswa = namaSiswa_TB.Text;
+            siswa.tempat_lahir = tempatlahir_TB.Text;
+            siswa.tgl_lahir = tglLahir_DTP.Value.ToString();
+            //siswa.tgl_lahir = "11/11/2019";
+            siswa.jenis_kelamin = jeniskelamin_CB.SelectedItem.ToString();
+            siswa.alamat = alamat_tb.Text;
+            siswa.nama_agama = agama_cb.SelectedItem.ToString();
+            siswa.nama_ibu = ibu_tb.Text;
+            siswa.nama_ayah = ayah_tb.Text;
+            siswa.nomor_ortu = nomorortu_tb.Text;
+            siswa.status_kawin = statuskawin_tb.Text;
+            siswa.id_walikelas = walikelas_cb.SelectedValue.ToString();
+            //siswa.id_kelas = kelas_cb.SelectedItem.ToString();
+            if (kelas_cb.SelectedIndex == 0)
+            {
+                siswa.id_kelas = "1";
+            }
+            else if (kelas_cb.SelectedIndex == 1)
+            {
+                siswa.id_kelas = "2";
+            }
 
-    public class Siswa
-    {
-        public string tempat_lahir { get; set; }
-        
-        public string tgl_lahir { get; set; }
-        
-        public string id_kelas { get; set; }
-        
-        public string nama_siswa { get; set; }
-        
-        public string id_siswa { get; set; }
-        
-        public string id_walikelas { get; set; }
-        
-        public string alamat { get; set; }
-        
-        public string nama_ibu { get; set; }
-        
-        public string nomor_ortu { get; set; }
-        
-        public string jenis_kelamin { get; set; }
-        
-        public string status_kawin { get; set; }
-        
-        public string nama_ayah { get; set; }
-        
-        public string nama_agama { get; set; }
+            updateData(siswa);
+            getData();
+        }
+
+        private void dataGridView1_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex < 0 || e.ColumnIndex < 0)
+                return;
+            idsiswa = Convert.ToString(dataGridView1.Rows[e.RowIndex].Cells[4].Value);
+            namaSiswa_TB.Text = Convert.ToString(dataGridView1.Rows[e.RowIndex].Cells[3].Value);
+            tempatlahir_TB.Text = Convert.ToString(dataGridView1.Rows[e.RowIndex].Cells[0].Value);
+            tglLahir_DTP.Value = Convert.ToDateTime(dataGridView1.Rows[e.RowIndex].Cells[1].Value);
+            jeniskelamin_CB.SelectedItem = Convert.ToString(dataGridView1.Rows[e.RowIndex].Cells[9].Value);
+            alamat_tb.Text = Convert.ToString(dataGridView1.Rows[e.RowIndex].Cells[6].Value);
+            agama_cb.SelectedItem = Convert.ToString(dataGridView1.Rows[e.RowIndex].Cells[12].Value);
+            ibu_tb.Text = Convert.ToString(dataGridView1.Rows[e.RowIndex].Cells[7].Value);
+            ayah_tb.Text = Convert.ToString(dataGridView1.Rows[e.RowIndex].Cells[11].Value);
+            namaSiswa_TB.Text = Convert.ToString(dataGridView1.Rows[e.RowIndex].Cells[3].Value);
+            nomorortu_tb.Text = Convert.ToString(dataGridView1.Rows[e.RowIndex].Cells[8].Value);
+            statuskawin_tb.Text = Convert.ToString(dataGridView1.Rows[e.RowIndex].Cells[10].Value);
+            walikelas_cb.SelectedValue = Convert.ToString(dataGridView1.Rows[e.RowIndex].Cells[5].Value);
+            kelas = Convert.ToString(dataGridView1.Rows[e.RowIndex].Cells[2].Value);
+
+            if (kelas == "1")
+            {
+                kelas_cb.SelectedIndex = 0;
+            }
+            else if (kelas == "2")
+            {
+                kelas_cb.SelectedIndex = 1;
+            }
+        }
     }
 }

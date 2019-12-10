@@ -147,14 +147,4 @@ namespace raporkuAPP
             getData();
         }
     }
-
-    public class WaliKelas
-    {
-
-        public string id_walikelas { get; set; }
-        public string nama_walikelas { get; set; }
-        public string uname_walikelas { get; set; }
-        public string passw_walikelas { get; set; }
-        public string id_kelas { get; set; }
-    }
 }
