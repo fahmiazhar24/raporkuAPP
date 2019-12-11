@@ -81,6 +81,16 @@ namespace raporkuAPP
                 return;
             idsiswa = Convert.ToString(dataGridView1.Rows[e.RowIndex].Cells[4].Value);
             label_nama.Text = Convert.ToString(dataGridView1.Rows[e.RowIndex].Cells[3].Value);
+
+            List<Rapot> isiswa = new List<Rapot>();
+
+            String result = new WebClient().DownloadString(baseUri + "getNilaiRapot/id=" + idkelas);
+
+            isiswa = JsonConvert.DeserializeObject<List<Rapot>>(result);
+
+            var bindingList = new BindingList<Rapot>(isiswa);
+            var source = new BindingSource(bindingList, null);
+            dataGridView2.DataSource = source;
         }
 
         private void button2_Click(object sender, EventArgs e)

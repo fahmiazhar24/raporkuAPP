@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/RaporService" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/RaporService" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfAdmin">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Admin" nillable="true" type="tns:Admin" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAdmin" nillable="true" type="tns:ArrayOfAdmin" />
+  <xs:complexType name="Admin">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="id_admin" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="passw_admin" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="uname_admin" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Admin" nillable="true" type="tns:Admin" />
+  <xs:complexType name="ArrayOfKelas">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Kelas" nillable="true" type="tns:Kelas" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfKelas" nillable="true" type="tns:ArrayOfKelas" />
+  <xs:complexType name="Kelas">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="id_kelas" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="nama_kelas" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Kelas" nillable="true" type="tns:Kelas" />
+  <xs:complexType name="ArrayOfMapel">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Mapel" nillable="true" type="tns:Mapel" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfMapel" nillable="true" type="tns:ArrayOfMapel" />
+  <xs:complexType name="Mapel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="id_mapel" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="nama_jurusan" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="nama_mapel" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Mapel" nillable="true" type="tns:Mapel" />
+  <xs:complexType name="ArrayOfRapot">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Rapot" nillable="true" type="tns:Rapot" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfRapot" nillable="true" type="tns:ArrayOfRapot" />
+  <xs:complexType name="Rapot">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="id_kelas" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="id_mapel" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="id_rapot" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="id_siswa" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="nilai" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="semester" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Rapot" nillable="true" type="tns:Rapot" />
+  <xs:complexType name="ArrayOfSiswa">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Siswa" nillable="true" type="tns:Siswa" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSiswa" nillable="true" type="tns:ArrayOfSiswa" />
+  <xs:complexType name="Siswa">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="alamat" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="id_kelas" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="id_siswa" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="id_walikelas" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="jenis_kelamin" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="nama_agama" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="nama_ayah" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="nama_ibu" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="nama_siswa" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="nomor_ortu" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="status_kawin" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="tempat_lahir" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="tgl_lahir" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Siswa" nillable="true" type="tns:Siswa" />
+  <xs:complexType name="ArrayOfWaliKelas">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="WaliKelas" nillable="true" type="tns:WaliKelas" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfWaliKelas" nillable="true" type="tns:ArrayOfWaliKelas" />
+  <xs:complexType name="WaliKelas">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="id_kelas" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="id_walikelas" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="nama_walikelas" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="passw_walikelas" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="uname_walikelas" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="WaliKelas" nillable="true" type="tns:WaliKelas" />
+</xs:schema>
