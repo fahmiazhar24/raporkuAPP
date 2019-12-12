@@ -18,7 +18,15 @@ namespace raporkuAPP
 
         private void NilaiRapor_Load(object sender, EventArgs e)
         {
-            
+            string id_kel = formMain.idkelas;
+            if (id_kel == "1")
+            {
+                comboBox1.SelectedIndex = 0;
+            }
+            else if (id_kel == "2")
+            {
+                comboBox1.SelectedIndex = 1;
+            }
         }
 
         public static String baseUri = Data.Uri;
