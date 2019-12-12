@@ -19,11 +19,6 @@ namespace raporkuAPP
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void button1_Click_1(object sender, EventArgs e)
         {
             try
@@ -91,6 +86,22 @@ namespace raporkuAPP
             else
             {
                 textBox_passw.UseSystemPasswordChar = true;
+            }
+        }
+
+        private void textBox_uname_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                button1_Click_1(sender, e);
+            }
+        }
+
+        private void textBox_passw_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                button1_Click_1(sender, e);
             }
         }
     }
