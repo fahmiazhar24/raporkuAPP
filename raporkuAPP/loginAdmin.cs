@@ -82,5 +82,17 @@ namespace raporkuAPP
             formMain.Show();
             this.Hide();
         }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox1.Checked)
+            {
+                textBox_passw.UseSystemPasswordChar = false;
+            }
+            else
+            {
+                textBox_passw.UseSystemPasswordChar = true;
+            }
+        }
     }
 }
