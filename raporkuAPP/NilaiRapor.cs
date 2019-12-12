@@ -15,6 +15,12 @@ namespace raporkuAPP
     public partial class NilaiRapor : UserControl
     {
         string idkelas, idsiswa, minat1, minat2, minat3, minat4, umum1, umum2, umum3, umum4;
+
+        private void NilaiRapor_Load(object sender, EventArgs e)
+        {
+            
+        }
+
         public static String baseUri = Data.Uri;
         public NilaiRapor()
         {

@@ -102,30 +102,15 @@ namespace raporkuAPP
             getData();
         }
 
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void walikelas_cb_Click(object sender, EventArgs e)
+        private void getdatawali()
         {
             List<WaliKelas> wali = new List<WaliKelas>();
 
             String result = new WebClient().DownloadString(baseUri + "dataWaliKelas");
 
             wali = JsonConvert.DeserializeObject<List<WaliKelas>>(result);
-
-            var bindingSource1 = new BindingSource();
-            bindingSource1.DataSource = wali;
-
-            walikelas_cb.DataSource = bindingSource1.DataSource;
-
-            //DataSet dataSet = new DataSet();
-            //walikelas_cb.DataSource = dataSet.Tables[1];
-            walikelas_cb.DisplayMember = "nama_walikelas";
-            walikelas_cb.ValueMember = "id_walikelas";
-
         }
+
 
         private void button_update_Click(object sender, EventArgs e)
         {
@@ -155,6 +140,52 @@ namespace raporkuAPP
 
             updateData(siswa);
             getData();
+
+            btSave.Enabled = true;
+            button_update.Enabled = false;
+        }
+
+        private void inputDataSiswa_Load(object sender, EventArgs e)
+        {
+            kelas_cb.Enabled = false;
+            button_update.Enabled = false;
+
+            //get data to Combo box wali kelas
+            List<WaliKelas> wali = new List<WaliKelas>();
+            String result = new WebClient().DownloadString(baseUri + "dataWaliKelas");
+            wali = JsonConvert.DeserializeObject<List<WaliKelas>>(result);
+
+            var bindingSource1 = new BindingSource();
+            bindingSource1.DataSource = wali;
+
+            walikelas_cb.DataSource = bindingSource1.DataSource;
+            walikelas_cb.DisplayMember = "nama_walikelas";
+            walikelas_cb.ValueMember = "id_walikelas";
+            /////////////////////
+        }
+
+        private void walikelas_cb_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (walikelas_cb.SelectedIndex == 0)
+            {
+                kelas_cb.SelectedIndex = 0;
+            }
+            else if (walikelas_cb.SelectedIndex == 1)
+            {
+                kelas_cb.SelectedIndex = 1;
+            }
+        }
+
+        private void bt_Cancel_Click(object sender, EventArgs e)
+        {
+            namaSiswa_TB.Text = "";
+            tempatlahir_TB.Text = "";
+            alamat_tb.Text = "";
+            agama_cb.SelectedItem = null;
+            ibu_tb.Text = "";
+            ayah_tb.Text = "";
+            nomorortu_tb.Text = "";
+            statuskawin_tb.Text = "";
         }
 
         private void dataGridView1_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -184,6 +215,9 @@ namespace raporkuAPP
             {
                 kelas_cb.SelectedIndex = 1;
             }
+
+            button_update.Enabled = true;
+            btSave.Enabled = false;
         }
     }
 }

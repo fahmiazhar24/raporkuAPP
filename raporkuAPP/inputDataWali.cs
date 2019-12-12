@@ -69,6 +69,11 @@ namespace raporkuAPP
             dataGridView1.DataSource = source;
         }
 
+        private void inputDataWali_Load(object sender, EventArgs e)
+        {
+            
+        }
+
         static void updateData(WaliKelas wali)
         {
             string request = JsonConvert.SerializeObject(wali);

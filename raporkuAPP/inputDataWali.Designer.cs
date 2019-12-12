@@ -170,6 +170,7 @@
             this.Controls.Add(this.namaWali_TB);
             this.Name = "inputDataWali";
             this.Size = new System.Drawing.Size(500, 600);
+            this.Load += new System.EventHandler(this.inputDataWali_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

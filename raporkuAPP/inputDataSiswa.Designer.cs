@@ -58,6 +58,7 @@
             this.jeniskelamin_CB = new System.Windows.Forms.ComboBox();
             this.tempatlahir_TB = new System.Windows.Forms.TextBox();
             this.namaSiswa_TB = new System.Windows.Forms.TextBox();
+            this.bt_Cancel = new System.Windows.Forms.Button();
             this.flowLayoutPanel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -77,6 +78,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.bt_Cancel);
             this.groupBox1.Controls.Add(this.tglLahir_DTP);
             this.groupBox1.Controls.Add(this.label12);
             this.groupBox1.Controls.Add(this.kelas_cb);
@@ -111,7 +113,6 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "DATA_SISWA";
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // tglLahir_DTP
             // 
@@ -160,7 +161,7 @@
             this.walikelas_cb.Name = "walikelas_cb";
             this.walikelas_cb.Size = new System.Drawing.Size(301, 24);
             this.walikelas_cb.TabIndex = 46;
-            this.walikelas_cb.Click += new System.EventHandler(this.walikelas_cb_Click);
+            this.walikelas_cb.SelectedIndexChanged += new System.EventHandler(this.walikelas_cb_SelectedIndexChanged);
             // 
             // label10
             // 
@@ -369,6 +370,16 @@
             this.namaSiswa_TB.Size = new System.Drawing.Size(301, 22);
             this.namaSiswa_TB.TabIndex = 22;
             // 
+            // bt_Cancel
+            // 
+            this.bt_Cancel.Location = new System.Drawing.Point(235, 668);
+            this.bt_Cancel.Name = "bt_Cancel";
+            this.bt_Cancel.Size = new System.Drawing.Size(71, 23);
+            this.bt_Cancel.TabIndex = 51;
+            this.bt_Cancel.Text = "Cancel";
+            this.bt_Cancel.UseVisualStyleBackColor = true;
+            this.bt_Cancel.Click += new System.EventHandler(this.bt_Cancel_Click);
+            // 
             // inputDataSiswa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -376,6 +387,7 @@
             this.Controls.Add(this.flowLayoutPanel1);
             this.Name = "inputDataSiswa";
             this.Size = new System.Drawing.Size(500, 600);
+            this.Load += new System.EventHandler(this.inputDataSiswa_Load);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -416,5 +428,6 @@
         private System.Windows.Forms.TextBox ibu_tb;
         private System.Windows.Forms.TextBox alamat_tb;
         private System.Windows.Forms.DateTimePicker tglLahir_DTP;
+        private System.Windows.Forms.Button bt_Cancel;
     }
 }
