@@ -63,6 +63,7 @@
             this.checkBox1.TabIndex = 21;
             this.checkBox1.Text = "show password";
             this.checkBox1.UseVisualStyleBackColor = false;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // textBox2
             // 
@@ -71,6 +72,7 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(583, 45);
             this.textBox2.TabIndex = 20;
+            this.textBox2.UseSystemPasswordChar = true;
             // 
             // label3
             // 
@@ -113,7 +115,7 @@
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(148)))), ((int)(((byte)(214)))));
             this.label1.Location = new System.Drawing.Point(85, 169);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(196, 64);
+            this.label1.Size = new System.Drawing.Size(206, 69);
             this.label1.TabIndex = 16;
             this.label1.Text = "LOGIN";
             // 
