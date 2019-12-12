@@ -14,7 +14,6 @@ namespace raporkuAPP
 {
     public partial class loginAdmin : Form
     {
-        public static String baseUri = "http://192.168.100.79/RaporService/Service1.svc/";
         public loginAdmin()
         {
             InitializeComponent();
@@ -30,7 +29,7 @@ namespace raporkuAPP
             try
             {
                 Admin admin = new Admin();
-                String result = new WebClient().DownloadString(baseUri + "getAdmin/id=" + textBox_uname.Text);
+                String result = new WebClient().DownloadString(Data.Uri + "getAdmin/id=" + textBox_uname.Text);
                 admin = JsonConvert.DeserializeObject<Admin>(result);
                 if (textBox_uname.Text == admin.uname_admin && textBox_passw.Text == admin.passw_admin)
                 {
