@@ -16,6 +16,63 @@ namespace raporkuAPP
     {
         string idkelas, idsiswa, minat1, minat2, minat3, minat4, umum1, umum2, umum3, umum4;
 
+        private void dataGridView2_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex < 0 || e.ColumnIndex < 0)
+                return;
+            //idsiswa = Convert.ToString(dataGridView1.Rows[e.RowIndex].Cells[4].Value);
+            string id_mapel = Convert.ToString(dataGridView1.Rows[e.RowIndex].Cells[3].Value);
+            string nilai = Convert.ToString(dataGridView1.Rows[e.RowIndex].Cells[0].Value);
+            if (id_mapel == "1" || id_mapel == "9")
+            {
+                if (nilai == "100") { comboBox3.SelectedIndex = 0; }
+                else if (nilai == "90") { comboBox3.SelectedIndex = 1; }
+                else if (nilai == "80") { comboBox3.SelectedIndex = 2; }
+            }
+            else if (id_mapel == "2" || id_mapel == "9")
+            {
+                if (nilai == "100") { comboBox4.SelectedIndex = 0; }
+                else if (nilai == "90") { comboBox4.SelectedIndex = 1; }
+                else if (nilai == "80") { comboBox4.SelectedIndex = 2; }
+            }
+            else if (id_mapel == "3" || id_mapel == "10")
+            {
+                if (nilai == "100") { comboBox5.SelectedIndex = 0; }
+                else if (nilai == "90") { comboBox5.SelectedIndex = 1; }
+                else if (nilai == "80") { comboBox5.SelectedIndex = 2; }
+            }
+            else if (id_mapel == "4" || id_mapel == "11")
+            {
+                if (nilai == "100") { comboBox6.SelectedIndex = 0; }
+                else if (nilai == "90") { comboBox6.SelectedIndex = 1; }
+                else if (nilai == "80") { comboBox6.SelectedIndex = 2; }
+            }
+            else if (id_mapel == "5" || id_mapel == "12")
+            {
+                if (nilai == "100") { comboBox10.SelectedIndex = 0; }
+                else if (nilai == "90") { comboBox10.SelectedIndex = 1; }
+                else if (nilai == "80") { comboBox10.SelectedIndex = 2; }
+            }
+            else if (id_mapel == "6" || id_mapel == "13")
+            {
+                if (nilai == "100") { comboBox9.SelectedIndex = 0; }
+                else if (nilai == "90") { comboBox9.SelectedIndex = 1; }
+                else if (nilai == "80") { comboBox9.SelectedIndex = 2; }
+            }
+            else if (id_mapel == "7" || id_mapel == "14")
+            {
+                if (nilai == "100") { comboBox8.SelectedIndex = 0; }
+                else if (nilai == "90") { comboBox8.SelectedIndex = 1; }
+                else if (nilai == "80") { comboBox8.SelectedIndex = 2; }
+            }
+            else if (id_mapel == "8" || id_mapel == "9")
+            {
+                if (nilai == "100") { comboBox7.SelectedIndex = 0; }
+                else if (nilai == "90") { comboBox7.SelectedIndex = 1; }
+                else if (nilai == "80") { comboBox7.SelectedIndex = 2; }
+            }
+        }
+
         private void NilaiRapor_Load(object sender, EventArgs e)
         {
             string id_kel = formMain.idkelas;
@@ -63,7 +120,7 @@ namespace raporkuAPP
             client.Headers.Add(HttpRequestHeader.ContentType, "application/json");
             //client.UploadString(baseUri + "adddata", request);
             string response = client.UploadString(baseUri + "adddataRapot", request);
-            //MessageBox.Show(response);
+            MessageBox.Show(response);
         }
 
         private void getData()
