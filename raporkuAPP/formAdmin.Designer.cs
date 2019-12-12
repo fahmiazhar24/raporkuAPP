@@ -54,7 +54,7 @@
             // btOut
             // 
             this.btOut.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(251)))), ((int)(((byte)(119)))));
-            this.btOut.Font = new System.Drawing.Font("Quantify", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btOut.Font = new System.Drawing.Font("Quantify", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btOut.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(148)))), ((int)(((byte)(214)))));
             this.btOut.Location = new System.Drawing.Point(17, 683);
             this.btOut.Name = "btOut";
@@ -62,6 +62,7 @@
             this.btOut.TabIndex = 31;
             this.btOut.Text = "LOGOUT";
             this.btOut.UseVisualStyleBackColor = false;
+            this.btOut.Click += new System.EventHandler(this.btOut_Click);
             // 
             // sidePanel
             // 

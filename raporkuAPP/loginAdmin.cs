@@ -24,12 +24,13 @@ namespace raporkuAPP
             try
             {
                 Admin admin = new Admin();
-                String result = new WebClient().DownloadString(Data.Uri + "getAdmin/id=" + textBox_uname.Text);
+                String result = new WebClient().DownloadString(Data.Uri + "getAdmin/username=" + textBox_uname.Text);
                 admin = JsonConvert.DeserializeObject<Admin>(result);
                 if (textBox_uname.Text == admin.uname_admin && textBox_passw.Text == admin.passw_admin)
                 {
                     //MessageBox.Show("Username Benar");
                     formAdmin log = new formAdmin();
+                    this.Hide();
                     log.Show();
                     //username = textBox_username.Text;
                     //Welcome welcome = new Welcome();
@@ -61,13 +62,6 @@ namespace raporkuAPP
                 }
             }
 
-        }
-
-        public class Admin
-        {
-            public string id_admin { get; set; }
-            public string uname_admin { get; set; }
-            public string passw_admin { get; set; }
         }
 
         private void button_back_Click(object sender, EventArgs e)

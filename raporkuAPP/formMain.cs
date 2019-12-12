@@ -48,13 +48,14 @@ namespace raporkuAPP
             try
             {
                 WaliKelas waliKelas = new WaliKelas();
-                String result = new WebClient().DownloadString(baseUri + "getWalikelas/id=" + textBox_.Text);
+                String result = new WebClient().DownloadString(baseUri + "getWalikelas/username=" + textBox_.Text);
                 waliKelas = JsonConvert.DeserializeObject<WaliKelas>(result);
                 idkelas = waliKelas.id_kelas;
                 if (textBox_.Text == waliKelas.uname_walikelas && textBox2.Text == waliKelas.passw_walikelas)
                 {
                     //MessageBox.Show("Username Benar");
                     menuWali log = new menuWali();
+                    this.Hide();
                     log.Show();
                     //username = textBox_username.Text;
                     //Welcome welcome = new Welcome();
