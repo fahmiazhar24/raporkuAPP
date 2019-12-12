@@ -24,7 +24,7 @@ namespace raporkuAPP
             try
             {
                 Admin admin = new Admin();
-                String result = new WebClient().DownloadString(Data.Uri + "getAdmin/id=" + textBox_uname.Text);
+                String result = new WebClient().DownloadString(Data.Uri + "getAdmin/username=" + textBox_uname.Text);
                 admin = JsonConvert.DeserializeObject<Admin>(result);
                 if (textBox_uname.Text == admin.uname_admin && textBox_passw.Text == admin.passw_admin)
                 {
