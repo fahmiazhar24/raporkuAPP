@@ -37,5 +37,11 @@ namespace raporkuAPP
             inputDataSiswa1.BringToFront();
         }
 
+        private void btOut_Click(object sender, EventArgs e)
+        {
+            loginAdmin loginAdmin = new loginAdmin();
+            this.Hide();
+            loginAdmin.Show();
+        }
     }
 }

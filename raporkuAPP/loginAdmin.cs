@@ -30,6 +30,7 @@ namespace raporkuAPP
                 {
                     //MessageBox.Show("Username Benar");
                     formAdmin log = new formAdmin();
+                    this.Hide();
                     log.Show();
                     //username = textBox_username.Text;
                     //Welcome welcome = new Welcome();

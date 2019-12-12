@@ -55,6 +55,7 @@ namespace raporkuAPP
                 {
                     //MessageBox.Show("Username Benar");
                     menuWali log = new menuWali();
+                    this.Hide();
                     log.Show();
                     //username = textBox_username.Text;
                     //Welcome welcome = new Welcome();
