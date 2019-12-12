@@ -57,4 +57,24 @@ namespace raporkuAPP
         public string passw_walikelas { get; set; }
         public string id_kelas { get; set; }
     }
+
+    public class Admin
+    {
+        public string id_admin { get; set; }
+        public string uname_admin { get; set; }
+        public string passw_admin { get; set; }
+    }
+
+    public class Kelas
+    {
+        public string id_kelas { get; set; }
+        public string nama_kelas { get; set; }
+    }
+
+    public class Mapel
+    {
+        public string id_mapel { get; set; }
+        public string nama_mapel { get; set; }
+        public string nama_jurusan { get; set; }
+    }
 }
