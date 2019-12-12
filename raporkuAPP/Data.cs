@@ -8,7 +8,7 @@ namespace raporkuAPP
 {
     public class Data
     {
-        public static String Uri = "http://192.168.100.43/RaporService/Service1.svc/";
+        public static String Uri = "https://raporservice.azurewebsites.net/Service1.svc/";
     }
     public class Rapot
     {
