@@ -59,7 +59,15 @@ namespace raporkuAPP
                     //this.Hide();
                     //welcome.Show();
                 }
-                else if (textBox_.Text != waliKelas.uname_walikelas && textBox2.Text == waliKelas.passw_walikelas)
+                else if (textBox2.Text == "")
+                {
+                    MessageBox.Show("Isi Password Anda");
+                }
+                else if (textBox_.Text != waliKelas.uname_walikelas)
+                {
+                    MessageBox.Show("Username tidak terdaftar");
+                }
+                else if (textBox_.Text != waliKelas.uname_walikelas || textBox2.Text != waliKelas.passw_walikelas)
                 {
                     MessageBox.Show("Username atau Password Salah");
                     //username = textBox_username.Text;
@@ -74,15 +82,6 @@ namespace raporkuAPP
                 {
                     MessageBox.Show("Isi Username Anda");
                 }
-                else if (textBox2.Text == "")
-                {
-                    MessageBox.Show("Isi Password Anda");
-                }
-                else
-                {
-                    MessageBox.Show("Username atau Password anda salah!!!");
-                }
-                //MessageBox.Show("Username Salah");
             }
         }
 
