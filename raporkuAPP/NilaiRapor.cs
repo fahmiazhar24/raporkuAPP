@@ -49,7 +49,7 @@ namespace raporkuAPP
             client.Headers.Add(HttpRequestHeader.ContentType, "application/json");
             //client.UploadString(baseUri + "adddata", request);
             string response = client.UploadString(baseUri + "adddataRapot", request);
-            MessageBox.Show(response);
+            //MessageBox.Show(response);
         }
 
         private void getData()
@@ -235,7 +235,7 @@ namespace raporkuAPP
 
             Rapot mum4 = new Rapot();
             mum4.id_siswa = idsiswa;
-            mum4.id_mapel = minat4;
+            mum4.id_mapel = umum4;
             mum4.id_rapot = idsiswa;
             mum4.semester = comboBox2.SelectedItem.ToString();
             mum4.nilai = comboBox7.SelectedItem.ToString();
