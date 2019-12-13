@@ -58,6 +58,9 @@
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.bt_Update = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.flowLayoutPanel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
@@ -80,6 +83,9 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.bt_Update);
             this.groupBox1.Controls.Add(this.dataGridView2);
             this.groupBox1.Controls.Add(this.label_nama);
             this.groupBox1.Controls.Add(this.button2);
@@ -101,7 +107,7 @@
             // dataGridView2
             // 
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(16, 738);
+            this.dataGridView2.Location = new System.Drawing.Point(16, 770);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowHeadersWidth = 51;
             this.dataGridView2.RowTemplate.Height = 24;
@@ -415,6 +421,34 @@
             this.dataGridView1.TabIndex = 9;
             this.dataGridView1.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentDoubleClick);
             // 
+            // bt_Update
+            // 
+            this.bt_Update.Location = new System.Drawing.Point(130, 685);
+            this.bt_Update.Name = "bt_Update";
+            this.bt_Update.Size = new System.Drawing.Size(75, 23);
+            this.bt_Update.TabIndex = 22;
+            this.bt_Update.Text = "UPDATE";
+            this.bt_Update.UseVisualStyleBackColor = true;
+            this.bt_Update.Click += new System.EventHandler(this.bt_Update_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(13, 744);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(129, 17);
+            this.label4.TabIndex = 23;
+            this.label4.Text = "DATA NILAI SISWA";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(13, 85);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(92, 17);
+            this.label5.TabIndex = 24;
+            this.label5.Text = "DATA SISWA";
+            // 
             // NilaiRapor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -468,5 +502,8 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label_nama;
         private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.Button bt_Update;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
     }
 }
