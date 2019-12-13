@@ -77,4 +77,11 @@ namespace raporkuAPP
         public string nama_mapel { get; set; }
         public string nama_jurusan { get; set; }
     }
+
+    public class ReportNilaiSiswa
+    {
+        public string nama_mapel { get; set; }
+        public string nilai { get; set; }
+        public string semester { get; set; }
+    }
 }

@@ -18,7 +18,7 @@ namespace raporkuAPP
 {
     public partial class ReportNilai : UserControl
     {
-        string idkelas, mapel;
+        string idkelas;
         public static String baseUri = Data.Uri;
         public ReportNilai()
         {
@@ -102,29 +102,49 @@ namespace raporkuAPP
             string idsiswa = Convert.ToString(dataGridView1.Rows[e.RowIndex].Cells[4].Value);
             //label_nama.Text = Convert.ToString(dataGridView1.Rows[e.RowIndex].Cells[3].Value);
 
-            List<Rapot> isiswa = new List<Rapot>();
+            List<ReportNilaiSiswa> isiswa = new List<ReportNilaiSiswa>();
 
-            String result = new WebClient().DownloadString(baseUri + "getNilaiRapot/id=" + idsiswa);
+            String result = new WebClient().DownloadString(baseUri + "reportNilaiSiswa/ids=" + idsiswa);
 
-            isiswa = JsonConvert.DeserializeObject<List<Rapot>>(result);
+            isiswa = JsonConvert.DeserializeObject<List<ReportNilaiSiswa>>(result);
            
-            Rapot rp = new Rapot();
-            if (rp.id_mapel == "1")
-            {
-                mapel = "BIOLOGI";
-            }
+            //Rapot rp = new Rapot();
+            //if (rp.id_mapel == "1")
+            //{
+            //    mapel = "BIOLOGI";
+            //}
 
             var bindingSource1 = new BindingSource();
             bindingSource1.DataSource = isiswa;
+            dataGridView2.DataSource = bindingSource1.DataSource;
 
             ////var bindingList = new BindingList<Rapot>(isiswa);
             ////var source = new BindingSource(bindingList, null);
-            dataGridView2.DataSource = bindingSource1.DataSource;
-            dataGridView2.Rows.Add();
-            dataGridView2.Rows[0].Cells["Column1"].Value = mapel;
-            dataGridView2.Rows[0].Cells["Column2"].Value = "nilai";
+            ///
+            //dataGridView2.DataSource = bindingSource1.DataSource;
+            //dataGridView2.Rows.Add();
+            //dataGridView2.Rows[0].Cells["Column1"].Value = mapel;
+            //dataGridView2.Rows[0].Cells["Column2"].Value = "nilai";
 
 
+        }
+
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            filterSem();
+        }
+
+        private void filterSem()
+        {
+            List<ReportNilaiSiswa> isiswa = new List<ReportNilaiSiswa>();
+
+            String result = new WebClient().DownloadString(baseUri + "filterSemesterv2/Semester=" + comboBox2.Text);
+
+            isiswa = JsonConvert.DeserializeObject<List<ReportNilaiSiswa>>(result);
+
+            var bindingList = new BindingList<ReportNilaiSiswa>(isiswa);
+            var source = new BindingSource(bindingList, null);
+            dataGridView2.DataSource = source;
         }
     }
 }
