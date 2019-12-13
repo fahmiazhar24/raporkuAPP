@@ -129,10 +129,10 @@
     <Compile Include="raporku.Designer.cs">
       <DependentUpon>raporku.cs</DependentUpon>
     </Compile>
-    <Compile Include="raporkuDataSet1.Designer.cs">
+    <Compile Include="raporkuDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>raporkuDataSet1.xsd</DependentUpon>
+      <DependentUpon>raporkuDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="splashScreen.cs">
       <SubType>Form</SubType>
@@ -198,16 +198,16 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="raporkuDataSet1.xsc">
-      <DependentUpon>raporkuDataSet1.xsd</DependentUpon>
+    <None Include="raporkuDataSet.xsc">
+      <DependentUpon>raporkuDataSet.xsd</DependentUpon>
     </None>
-    <None Include="raporkuDataSet1.xsd">
+    <None Include="raporkuDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>raporkuDataSet1.Designer.cs</LastGenOutput>
+      <LastGenOutput>raporkuDataSet.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="raporkuDataSet1.xss">
-      <DependentUpon>raporkuDataSet1.xsd</DependentUpon>
+    <None Include="raporkuDataSet.xss">
+      <DependentUpon>raporkuDataSet.xsd</DependentUpon>
     </None>
     <None Include="Resources\splashScreen_raporku.png" />
   </ItemGroup>

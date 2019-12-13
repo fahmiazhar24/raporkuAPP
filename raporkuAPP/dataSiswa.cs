@@ -47,8 +47,8 @@ namespace raporkuAPP
 
         private void dataSiswa_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'raporkuDataSet1.siswa' table. You can move, or remove it, as needed.
-            this.siswaTableAdapter.Fill(this.raporkuDataSet1.siswa);
+            // TODO: This line of code loads data into the 'raporkuDataSet.siswa' table. You can move, or remove it, as needed.
+            this.siswaTableAdapter.Fill(this.raporkuDataSet.siswa);
 
         }
     }
