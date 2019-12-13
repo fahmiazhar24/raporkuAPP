@@ -17,31 +17,9 @@ namespace raporkuAPP
         public dataSiswa()
         {
             InitializeComponent();
-            List<Siswa> isiswa = new List<Siswa>();
-
-            String result = new WebClient().DownloadString(Data.Uri + "datasiswa");
-
-            isiswa = JsonConvert.DeserializeObject<List<Siswa>>(result);
-
-            var bindingList = new BindingList<Siswa>(isiswa);
-            var source = new BindingSource(bindingList, null);
-            dataGridView1.DataSource = source;
-        }
-        private void getData()
-        {
-            List<Siswa> isiswa = new List<Siswa>();
-
-            String result = new WebClient().DownloadString(Data.Uri + "searchDataSiswa/nama=" + textBox1.Text);
-
-            isiswa = JsonConvert.DeserializeObject<List<Siswa>>(result);
-
-            var bindingList = new BindingList<Siswa>(isiswa);
-            var source = new BindingSource(bindingList, null);
-            dataGridView1.DataSource = source;
-
             //List<Siswa> isiswa = new List<Siswa>();
 
-            //String result = new WebClient().DownloadString(baseUri + "dataSiswa");
+            //String result = new WebClient().DownloadString(Data.Uri + "datasiswa");
 
             //isiswa = JsonConvert.DeserializeObject<List<Siswa>>(result);
 
@@ -69,14 +47,7 @@ namespace raporkuAPP
 
         private void dataSiswa_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'raporkuDataSet.siswa' table. You can move, or remove it, as needed.
-           // this.siswaTableAdapter.Fill(this.raporkuDataSet.siswa);
 
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            getData();
         }
     }
 }

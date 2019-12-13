@@ -155,7 +155,7 @@ namespace raporkuAPP
 
             List<Rapot> isiswa = new List<Rapot>();
 
-            String result = new WebClient().DownloadString(baseUri + "getNilaiRapot/id=" + idkelas);
+            String result = new WebClient().DownloadString(baseUri + "getNilaiRapot/id=" + idsiswa);
 
             isiswa = JsonConvert.DeserializeObject<List<Rapot>>(result);
 
