@@ -81,14 +81,20 @@ namespace raporkuAPP
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (textBox1.Text == null)
+            try
             {
-                getDataSiswa();
+                if (textBox1.Text == "")
+                {
+                    getDataSiswa();
+                }
+                else
+                {
+                    searchDataSiswa();
+                }
             }
-            else
+            catch
             {
 
-                searchDataSiswa();
             }
         }
     }
