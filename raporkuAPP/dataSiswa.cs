@@ -17,15 +17,15 @@ namespace raporkuAPP
         public dataSiswa()
         {
             InitializeComponent();
-            //List<Siswa> isiswa = new List<Siswa>();
+            List<Siswa> isiswa = new List<Siswa>();
 
-            //String result = new WebClient().DownloadString(Data.Uri + "datasiswa");
+            String result = new WebClient().DownloadString(Data.Uri + "datasiswa");
 
-            //isiswa = JsonConvert.DeserializeObject<List<Siswa>>(result);
+            isiswa = JsonConvert.DeserializeObject<List<Siswa>>(result);
 
-            //var bindingList = new BindingList<Siswa>(isiswa);
-            //var source = new BindingSource(bindingList, null);
-            //dataGridView1.DataSource = source;
+            var bindingList = new BindingList<Siswa>(isiswa);
+            var source = new BindingSource(bindingList, null);
+            dataGridView1.DataSource = source;
         }
         private void getData()
         {
