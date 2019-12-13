@@ -20,11 +20,10 @@ namespace raporkuAPP
 
         private void button1_Click(object sender, EventArgs e)
         {
+            cekLog = "1";
             formMain main = new formMain();
             main.Show();
             this.Hide();
-
-            cekLog = "1";
         }
 
         private void btDataSiswa_Click(object sender, EventArgs e)
