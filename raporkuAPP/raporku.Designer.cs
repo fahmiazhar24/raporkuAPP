@@ -48,6 +48,7 @@
             this.btBack.TabIndex = 31;
             this.btBack.Text = "BACK";
             this.btBack.UseVisualStyleBackColor = false;
+            this.btBack.Click += new System.EventHandler(this.btBack_Click);
             // 
             // panel1
             // 

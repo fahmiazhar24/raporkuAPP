@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<xs:schema id="raporkuDataSet1" targetNamespace="http://tempuri.org/raporkuDataSet1.xsd" xmlns:mstns="http://tempuri.org/raporkuDataSet1.xsd" xmlns="http://tempuri.org/raporkuDataSet1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+<xs:schema id="raporkuDataSet" targetNamespace="http://tempuri.org/raporkuDataSet.xsd" xmlns:mstns="http://tempuri.org/raporkuDataSet.xsd" xmlns="http://tempuri.org/raporkuDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
   <xs:annotation>
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
       <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
@@ -138,7 +138,7 @@ SELECT Tempat_lahir, Tanggal_lahir, ID_kelas, Nama_siswa, ID_siswa, ID_wali_kela
       </DataSource>
     </xs:appinfo>
   </xs:annotation>
-  <xs:element name="raporkuDataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="raporkuDataSet1" msprop:Generator_UserDSName="raporkuDataSet1">
+  <xs:element name="raporkuDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="raporkuDataSet" msprop:Generator_UserDSName="raporkuDataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
         <xs:element name="siswa" msprop:Generator_TableClassName="siswaDataTable" msprop:Generator_TableVarName="tablesiswa" msprop:Generator_TablePropName="siswa" msprop:Generator_RowDeletingName="siswaRowDeleting" msprop:Generator_RowChangingName="siswaRowChanging" msprop:Generator_RowEvHandlerName="siswaRowChangeEventHandler" msprop:Generator_RowDeletedName="siswaRowDeleted" msprop:Generator_UserTableName="siswa" msprop:Generator_RowChangedName="siswaRowChanged" msprop:Generator_RowEvArgName="siswaRowChangeEvent" msprop:Generator_RowClassName="siswaRow">

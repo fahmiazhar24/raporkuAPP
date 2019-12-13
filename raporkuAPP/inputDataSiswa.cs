@@ -200,7 +200,7 @@ namespace raporkuAPP
             idsiswa = Convert.ToString(dataGridView1.Rows[e.RowIndex].Cells[4].Value);
             namaSiswa_TB.Text = Convert.ToString(dataGridView1.Rows[e.RowIndex].Cells[3].Value);
             tempatlahir_TB.Text = Convert.ToString(dataGridView1.Rows[e.RowIndex].Cells[0].Value);
-            tglLahir_DTP.Value = Convert.ToDateTime(dataGridView1.Rows[e.RowIndex].Cells[1].Value);
+            tglLahir_DTP.Text = Convert.ToString(dataGridView1.Rows[e.RowIndex].Cells[1].Value);
             jeniskelamin_CB.SelectedItem = Convert.ToString(dataGridView1.Rows[e.RowIndex].Cells[9].Value);
             alamat_tb.Text = Convert.ToString(dataGridView1.Rows[e.RowIndex].Cells[6].Value);
             agama_cb.SelectedItem = Convert.ToString(dataGridView1.Rows[e.RowIndex].Cells[12].Value);

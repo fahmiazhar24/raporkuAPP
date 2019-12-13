@@ -33,5 +33,12 @@ namespace raporkuAPP
             sidePanel.Top = btInpuNilai.Top;
             nilaiRapor1.BringToFront();
         }
+
+        private void btBack_Click(object sender, EventArgs e)
+        {
+            menuWali menuWali = new menuWali();
+            this.Hide();
+            menuWali.Show();
+        }
     }
 }
