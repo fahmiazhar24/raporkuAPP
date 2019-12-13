@@ -33,11 +33,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.raporkuDataSet1 = new raporkuAPP.raporkuDataSet1();
-            this.siswaBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.siswaTableAdapter = new raporkuAPP.raporkuDataSet1TableAdapters.siswaTableAdapter();
             this.tempatlahirDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tanggallahirDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.iDkelasDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -51,11 +46,16 @@
             this.statuskawinDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.namaayahDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.namaagamaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.siswaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.raporkuDataSet1 = new raporkuAPP.raporkuDataSet1();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.siswaTableAdapter = new raporkuAPP.raporkuDataSet1TableAdapters.siswaTableAdapter();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.raporkuDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.siswaBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.raporkuDataSet1)).BeginInit();
             this.SuspendLayout();
             // 
             // btBack
@@ -64,7 +64,7 @@
             this.btBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btBack.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(148)))), ((int)(((byte)(214)))));
             this.btBack.Location = new System.Drawing.Point(13, 555);
-            this.btBack.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btBack.Margin = new System.Windows.Forms.Padding(2);
             this.btBack.Name = "btBack";
             this.btBack.Size = new System.Drawing.Size(120, 36);
             this.btBack.TabIndex = 31;
@@ -79,7 +79,7 @@
             this.panel1.Controls.Add(this.btBack);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(150, 609);
             this.panel1.TabIndex = 1;
@@ -88,7 +88,7 @@
             // 
             this.pictureBox1.Image = global::raporkuAPP.Properties.Resources.Data_Siswa;
             this.pictureBox1.Location = new System.Drawing.Point(31, 96);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(75, 388);
             this.pictureBox1.TabIndex = 32;
@@ -114,48 +114,12 @@
             this.namaagamaDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.siswaBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(154, 86);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(423, 211);
             this.dataGridView1.TabIndex = 2;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick_1);
-            // 
-            // textBox1
-            // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(154, 51);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(344, 23);
-            this.textBox1.TabIndex = 3;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(251)))), ((int)(((byte)(119)))));
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(148)))), ((int)(((byte)(214)))));
-            this.button1.Location = new System.Drawing.Point(502, 45);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 28);
-            this.button1.TabIndex = 33;
-            this.button1.Text = "search";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // raporkuDataSet1
-            // 
-            this.raporkuDataSet1.DataSetName = "raporkuDataSet1";
-            this.raporkuDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // siswaBindingSource
-            // 
-            this.siswaBindingSource.DataMember = "siswa";
-            this.siswaBindingSource.DataSource = this.raporkuDataSet1;
-            // 
-            // siswaTableAdapter
-            // 
-            this.siswaTableAdapter.ClearBeforeFill = true;
             // 
             // tempatlahirDataGridViewTextBoxColumn
             // 
@@ -236,6 +200,43 @@
             this.namaagamaDataGridViewTextBoxColumn.HeaderText = "Nama_agama";
             this.namaagamaDataGridViewTextBoxColumn.Name = "namaagamaDataGridViewTextBoxColumn";
             // 
+            // siswaBindingSource
+            // 
+            this.siswaBindingSource.DataMember = "siswa";
+            this.siswaBindingSource.DataSource = this.raporkuDataSet1;
+            // 
+            // raporkuDataSet1
+            // 
+            this.raporkuDataSet1.DataSetName = "raporkuDataSet1";
+            this.raporkuDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(154, 51);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(344, 23);
+            this.textBox1.TabIndex = 3;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(251)))), ((int)(((byte)(119)))));
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(148)))), ((int)(((byte)(214)))));
+            this.button1.Location = new System.Drawing.Point(502, 45);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 28);
+            this.button1.TabIndex = 33;
+            this.button1.Text = "search";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // siswaTableAdapter
+            // 
+            this.siswaTableAdapter.ClearBeforeFill = true;
+            // 
             // dataSiswa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -245,15 +246,15 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "dataSiswa";
             this.Text = "dataSiswa";
             this.Load += new System.EventHandler(this.dataSiswa_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.raporkuDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.siswaBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.raporkuDataSet1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
