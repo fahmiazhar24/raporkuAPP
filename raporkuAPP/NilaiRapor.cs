@@ -16,6 +16,26 @@ namespace raporkuAPP
     {
         string idkelas, idsiswa, minat1, minat2, minat3, minat4, umum1, umum2, umum3, umum4;
 
+        private void bt_Update_Click(object sender, EventArgs e)
+        {
+            bt_Update.Enabled = false;
+            button2.Enabled = true;
+            ClearForm();
+        }
+
+        private void ClearForm()
+        {
+            comboBox3.SelectedValue = null;
+            comboBox4.SelectedValue = null;
+            comboBox5.SelectedValue = null;
+            comboBox6.SelectedValue = null;
+            comboBox7.SelectedValue = null;
+            comboBox8.SelectedValue = null;
+            comboBox9.SelectedValue = null;
+            comboBox10.SelectedValue = null;
+            label_nama.Text = "";
+        }
+
         private void dataGridView2_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex < 0 || e.ColumnIndex < 0)
@@ -71,6 +91,9 @@ namespace raporkuAPP
                 else if (nilai == "90") { comboBox7.SelectedIndex = 1; }
                 else if (nilai == "80") { comboBox7.SelectedIndex = 2; }
             }
+
+            bt_Update.Enabled = true;
+            button2.Enabled = false;
         }
 
         private void NilaiRapor_Load(object sender, EventArgs e)
@@ -84,6 +107,8 @@ namespace raporkuAPP
             {
                 comboBox1.SelectedIndex = 1;
             }
+
+            bt_Update.Enabled = false;
         }
 
         public static String baseUri = Data.Uri;
@@ -329,6 +354,8 @@ namespace raporkuAPP
             addData(mum2);
             addData(mum3);
             addData(mum4);
+
+            ClearForm();
         }
     }
 }
