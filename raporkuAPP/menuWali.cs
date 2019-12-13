@@ -12,6 +12,7 @@ namespace raporkuAPP
 {
     public partial class menuWali : Form
     {
+        public static string cekLog;
         public menuWali()
         {
             InitializeComponent();
@@ -22,6 +23,8 @@ namespace raporkuAPP
             formMain main = new formMain();
             main.Show();
             this.Hide();
+
+            cekLog = "1";
         }
 
         private void btDataSiswa_Click(object sender, EventArgs e)
