@@ -112,6 +112,7 @@
             // inputDataSiswa1
             // 
             this.inputDataSiswa1.Location = new System.Drawing.Point(267, 80);
+            this.inputDataSiswa1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.inputDataSiswa1.Name = "inputDataSiswa1";
             this.inputDataSiswa1.Size = new System.Drawing.Size(488, 560);
             this.inputDataSiswa1.TabIndex = 2;

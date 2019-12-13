@@ -98,6 +98,7 @@
             this.Controls.Add(this.btDataSiswa);
             this.DoubleBuffered = true;
             this.Name = "menuWali";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "menuAdmin";
             this.ResumeLayout(false);
             this.PerformLayout();

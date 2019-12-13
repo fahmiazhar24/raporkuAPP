@@ -116,6 +116,7 @@
             this.Controls.Add(this.nilaiRapor1);
             this.Controls.Add(this.panel1);
             this.Name = "raporku";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "raporku";
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
