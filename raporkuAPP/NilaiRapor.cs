@@ -14,13 +14,18 @@ namespace raporkuAPP
 {
     public partial class NilaiRapor : UserControl
     {
-        string idkelas, idsiswa, minat1, minat2, minat3, minat4, umum1, umum2, umum3, umum4;
+        string idkelas, idsiswa, minat1, minat2, minat3, minat4, umum1, umum2, umum3, umum4, id_mapel, nilai;
 
         private void bt_Update_Click(object sender, EventArgs e)
         {
             bt_Update.Enabled = false;
             button2.Enabled = true;
             ClearForm();
+        }
+
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            filterSem();
         }
 
         private void ClearForm()
@@ -41,51 +46,52 @@ namespace raporkuAPP
             if (e.RowIndex < 0 || e.ColumnIndex < 0)
                 return;
             //idsiswa = Convert.ToString(dataGridView1.Rows[e.RowIndex].Cells[4].Value);
-            string id_mapel = Convert.ToString(dataGridView1.Rows[e.RowIndex].Cells[3].Value);
-            string nilai = Convert.ToString(dataGridView1.Rows[e.RowIndex].Cells[0].Value);
+            id_mapel = Convert.ToString(dataGridView2.Rows[e.RowIndex].Cells[3].Value);
+            nilai = Convert.ToString(dataGridView2.Rows[e.RowIndex].Cells[0].Value);
+            //MessageBox.Show(id_mapel + " " + nilai);
             if (id_mapel == "1" || id_mapel == "9")
             {
                 if (nilai == "100") { comboBox3.SelectedIndex = 0; }
                 else if (nilai == "90") { comboBox3.SelectedIndex = 1; }
                 else if (nilai == "80") { comboBox3.SelectedIndex = 2; }
             }
-            else if (id_mapel == "2" || id_mapel == "9")
+            else if (id_mapel == "2" || id_mapel == "10")
             {
                 if (nilai == "100") { comboBox4.SelectedIndex = 0; }
                 else if (nilai == "90") { comboBox4.SelectedIndex = 1; }
                 else if (nilai == "80") { comboBox4.SelectedIndex = 2; }
             }
-            else if (id_mapel == "3" || id_mapel == "10")
+            else if (id_mapel == "3" || id_mapel == "11")
             {
                 if (nilai == "100") { comboBox5.SelectedIndex = 0; }
                 else if (nilai == "90") { comboBox5.SelectedIndex = 1; }
                 else if (nilai == "80") { comboBox5.SelectedIndex = 2; }
             }
-            else if (id_mapel == "4" || id_mapel == "11")
+            else if (id_mapel == "4" || id_mapel == "12")
             {
                 if (nilai == "100") { comboBox6.SelectedIndex = 0; }
                 else if (nilai == "90") { comboBox6.SelectedIndex = 1; }
                 else if (nilai == "80") { comboBox6.SelectedIndex = 2; }
             }
-            else if (id_mapel == "5" || id_mapel == "12")
+            else if (id_mapel == "5" || id_mapel == "13")
             {
                 if (nilai == "100") { comboBox10.SelectedIndex = 0; }
                 else if (nilai == "90") { comboBox10.SelectedIndex = 1; }
                 else if (nilai == "80") { comboBox10.SelectedIndex = 2; }
             }
-            else if (id_mapel == "6" || id_mapel == "13")
+            else if (id_mapel == "6" || id_mapel == "14")
             {
                 if (nilai == "100") { comboBox9.SelectedIndex = 0; }
                 else if (nilai == "90") { comboBox9.SelectedIndex = 1; }
                 else if (nilai == "80") { comboBox9.SelectedIndex = 2; }
             }
-            else if (id_mapel == "7" || id_mapel == "14")
+            else if (id_mapel == "7" || id_mapel == "15")
             {
                 if (nilai == "100") { comboBox8.SelectedIndex = 0; }
                 else if (nilai == "90") { comboBox8.SelectedIndex = 1; }
                 else if (nilai == "80") { comboBox8.SelectedIndex = 2; }
             }
-            else if (id_mapel == "8" || id_mapel == "9")
+            else if (id_mapel == "8" || id_mapel == "16")
             {
                 if (nilai == "100") { comboBox7.SelectedIndex = 0; }
                 else if (nilai == "90") { comboBox7.SelectedIndex = 1; }
@@ -181,6 +187,19 @@ namespace raporkuAPP
             List<Rapot> isiswa = new List<Rapot>();
 
             String result = new WebClient().DownloadString(baseUri + "getNilaiRapot/id=" + idsiswa);
+
+            isiswa = JsonConvert.DeserializeObject<List<Rapot>>(result);
+
+            var bindingList = new BindingList<Rapot>(isiswa);
+            var source = new BindingSource(bindingList, null);
+            dataGridView2.DataSource = source;
+        }
+
+        private void filterSem()
+        {
+            List<Rapot> isiswa = new List<Rapot>();
+
+            String result = new WebClient().DownloadString(baseUri + "filterSemester/Semester=" + comboBox2.Text);
 
             isiswa = JsonConvert.DeserializeObject<List<Rapot>>(result);
 

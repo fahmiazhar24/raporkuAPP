@@ -17,6 +17,11 @@ namespace raporkuAPP
         public dataSiswa()
         {
             InitializeComponent();
+            getDataSiswa();
+        }
+
+        private void getDataSiswa()
+        {
             List<Siswa> isiswa = new List<Siswa>();
 
             String result = new WebClient().DownloadString(Data.Uri + "datasiswa");
@@ -26,8 +31,9 @@ namespace raporkuAPP
             var bindingList = new BindingList<Siswa>(isiswa);
             var source = new BindingSource(bindingList, null);
             dataGridView1.DataSource = source;
+
         }
-        private void getData()
+        private void searchDataSiswa()
         {
             List<Siswa> isiswa = new List<Siswa>();
 
@@ -75,7 +81,15 @@ namespace raporkuAPP
 
         private void button1_Click(object sender, EventArgs e)
         {
-            getData();
+            if (textBox1.Text == null)
+            {
+                getDataSiswa();
+            }
+            else
+            {
+
+                searchDataSiswa();
+            }
         }
     }
 }
