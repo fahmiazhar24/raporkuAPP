@@ -34,6 +34,7 @@
             this.btReport = new System.Windows.Forms.Button();
             this.btInpuNilai = new System.Windows.Forms.Button();
             this.nilaiRapor1 = new raporkuAPP.NilaiRapor();
+            this.reportNilai1 = new raporkuAPP.ReportNilai();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -108,13 +109,21 @@
             this.nilaiRapor1.Size = new System.Drawing.Size(500, 600);
             this.nilaiRapor1.TabIndex = 2;
             // 
+            // reportNilai1
+            // 
+            this.reportNilai1.Location = new System.Drawing.Point(239, 61);
+            this.reportNilai1.Name = "reportNilai1";
+            this.reportNilai1.Size = new System.Drawing.Size(500, 601);
+            this.reportNilai1.TabIndex = 3;
+            // 
             // raporku
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(782, 753);
-            this.Controls.Add(this.nilaiRapor1);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.nilaiRapor1);
+            this.Controls.Add(this.reportNilai1);
             this.Name = "raporku";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "raporku";
@@ -131,5 +140,6 @@
         private System.Windows.Forms.Button btReport;
         private System.Windows.Forms.Button btInpuNilai;
         private NilaiRapor nilaiRapor1;
+        private ReportNilai reportNilai1;
     }
 }

@@ -25,6 +25,7 @@ namespace raporkuAPP
         {
             sidePanel.Height = btReport.Height;
             sidePanel.Top = btReport.Top;
+            reportNilai1.BringToFront();
         }
 
         private void btInputNilai_Click(object sender, EventArgs e)
