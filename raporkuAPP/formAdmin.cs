@@ -14,6 +14,7 @@ namespace raporkuAPP
 {
     public partial class formAdmin : Form
     {
+        public static string cekLog;
         public formAdmin()
         {
             InitializeComponent();
@@ -39,9 +40,13 @@ namespace raporkuAPP
 
         private void btOut_Click(object sender, EventArgs e)
         {
-            loginAdmin loginAdmin = new loginAdmin();
+            //loginAdmin loginAdmin = new loginAdmin();
+            //this.Hide();
+            //loginAdmin.Show();
+            cekLog = "1";
+            formMain main = new formMain();
+            main.Show();
             this.Hide();
-            loginAdmin.Show();
         }
     }
 }
