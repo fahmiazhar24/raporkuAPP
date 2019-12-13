@@ -19,11 +19,24 @@ namespace raporkuAPP
         public static string idkelas;
         public formMain()
         {
-            Thread t = new Thread(new ThreadStart(StartForm));
-            t.Start();
-            Thread.Sleep(5000);
-            InitializeComponent();
-            t.Abort();
+            //Thread t = new Thread(new ThreadStart(StartForm));
+            //t.Start();
+            //Thread.Sleep(5000);
+            //InitializeComponent();
+            //t.Abort();
+
+            if (menuWali.cekLog == "1")
+            {
+                InitializeComponent();
+            }
+            else
+            {
+                Thread t = new Thread(new ThreadStart(StartForm));
+                t.Start();
+                Thread.Sleep(5000);
+                InitializeComponent();
+                t.Abort();
+            }
         }
 
         public void StartForm()
