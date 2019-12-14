@@ -18,7 +18,7 @@ namespace raporkuAPP
 {
     public partial class ReportNilai : UserControl
     {
-        string idkelas, idsiswa;
+        string idkelas, idsiswa, namasiswa;
         public static String baseUri = Data.Uri;
         public ReportNilai()
         {
@@ -85,6 +85,7 @@ namespace raporkuAPP
             if (e.RowIndex < 0 || e.ColumnIndex < 0)
                 return;
             idsiswa = Convert.ToString(dataGridView1.Rows[e.RowIndex].Cells[4].Value);
+            namasiswa = Convert.ToString(dataGridView1.Rows[e.RowIndex].Cells[3].Value);
             //label_nama.Text = Convert.ToString(dataGridView1.Rows[e.RowIndex].Cells[3].Value);
 
             List<ReportNilaiSiswa> isiswa = new List<ReportNilaiSiswa>();
@@ -98,6 +99,8 @@ namespace raporkuAPP
             //{
             //    mapel = "BIOLOGI";
             //}
+
+            
 
             var bindingSource1 = new BindingSource();
             bindingSource1.DataSource = isiswa;
@@ -309,7 +312,7 @@ namespace raporkuAPP
             //xlWorkSheet.PasteSpecial(CR, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, true);
             SaveFileDialog sfd = new SaveFileDialog();
             sfd.Filter = "Excel Documents (*.xls)|*.xls";
-            sfd.FileName = "export.xls";
+            sfd.FileName = namasiswa + "-" + comboBox2.Text + ".xls";
             if (sfd.ShowDialog() == DialogResult.OK)
             {
                 //ToCsV(dataGridView1, @"c:\export.xls");
