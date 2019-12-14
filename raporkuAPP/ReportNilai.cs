@@ -74,6 +74,10 @@ namespace raporkuAPP
             var bindingList = new BindingList<Siswa>(isiswa);
             var source = new BindingSource(bindingList, null);
             dataGridView1.DataSource = source;
+
+
+            ///
+
         }
 
         private void dataGridView1_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
