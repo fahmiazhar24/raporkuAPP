@@ -164,7 +164,6 @@
             this.bt_export.TabIndex = 33;
             this.bt_export.Text = "EXPORT";
             this.bt_export.UseVisualStyleBackColor = true;
-            this.bt_export.Click += new System.EventHandler(this.bt_export_Click_1);
             // 
             // ReportNilai
             // 
