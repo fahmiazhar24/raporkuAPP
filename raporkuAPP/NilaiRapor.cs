@@ -14,13 +14,179 @@ namespace raporkuAPP
 {
     public partial class NilaiRapor : UserControl
     {
-        string idkelas, idsiswa, minat1, minat2, minat3, minat4, umum1, umum2, umum3, umum4, id_mapel, nilai;
+        string idkelas, idsiswa, minat1, minat2, minat3, minat4, umum1, umum2, umum3, umum4, id_mapel, nilai, smes;
 
         private void bt_Update_Click(object sender, EventArgs e)
         {
+            if (comboBox1.SelectedIndex == 0)
+            {
+                minat1 = "1";
+                minat2 = "2";
+                minat3 = "3";
+                minat4 = "4";
+                umum1 = "5";
+                umum2 = "6";
+                umum3 = "7";
+                umum4 = "8";
+            }
+            else if (comboBox1.SelectedIndex == 1)
+            {
+                minat1 = "9";
+                minat2 = "10";
+                minat3 = "11";
+                minat4 = "12";
+                umum1 = "13";
+                umum2 = "14";
+                umum3 = "15";
+                umum4 = "16";
+            }
+
+            //PEMINATAN
+            Rapot min1 = new Rapot();
+            min1.id_siswa = idsiswa;
+            min1.id_mapel = minat2;
+            min1.id_rapot = idsiswa;
+            min1.semester = smes;
+            min1.nilai = comboBox3.SelectedItem.ToString();
+
+            if (comboBox1.SelectedIndex == 0)
+            {
+                min1.id_kelas = "1";
+            }
+            else if (comboBox1.SelectedIndex == 1)
+            {
+                min1.id_kelas = "2";
+            }
+
+            Rapot min2 = new Rapot();
+            min2.id_siswa = idsiswa;
+            min2.id_mapel = minat1;
+            min2.id_rapot = idsiswa;
+            min2.semester = smes;
+            min2.nilai = comboBox4.SelectedItem.ToString();
+
+            if (comboBox1.SelectedIndex == 0)
+            {
+                min2.id_kelas = "1";
+            }
+            else if (comboBox1.SelectedIndex == 1)
+            {
+                min2.id_kelas = "2";
+            }
+
+            Rapot min3 = new Rapot();
+            min3.id_siswa = idsiswa;
+            min3.id_mapel = minat3;
+            min3.id_rapot = idsiswa;
+            min3.semester = smes;
+            min3.nilai = comboBox5.SelectedItem.ToString();
+
+            if (comboBox1.SelectedIndex == 0)
+            {
+                min3.id_kelas = "1";
+            }
+            else if (comboBox1.SelectedIndex == 1)
+            {
+                min3.id_kelas = "2";
+            }
+
+            Rapot min4 = new Rapot();
+            min4.id_siswa = idsiswa;
+            min4.id_mapel = minat4;
+            min4.id_rapot = idsiswa;
+            min4.semester = smes;
+            min4.nilai = comboBox6.SelectedItem.ToString();
+
+            if (comboBox1.SelectedIndex == 0)
+            {
+                min4.id_kelas = "1";
+            }
+            else if (comboBox1.SelectedIndex == 1)
+            {
+                min4.id_kelas = "2";
+            }
+            //END PEMINATAN
+
+            //UMUM
+            Rapot mum1 = new Rapot();
+            mum1.id_siswa = idsiswa;
+            mum1.id_mapel = umum1;
+            mum1.id_rapot = idsiswa;
+            mum1.semester = smes;
+            mum1.nilai = comboBox10.SelectedItem.ToString();
+
+            if (comboBox1.SelectedIndex == 0)
+            {
+                mum1.id_kelas = "1";
+            }
+            else if (comboBox1.SelectedIndex == 1)
+            {
+                mum1.id_kelas = "2";
+            }
+
+            Rapot mum2 = new Rapot();
+            mum2.id_siswa = idsiswa;
+            mum2.id_mapel = umum2;
+            mum2.id_rapot = idsiswa;
+            mum2.semester = smes;
+            mum2.nilai = comboBox9.SelectedItem.ToString();
+
+            if (comboBox1.SelectedIndex == 0)
+            {
+                mum2.id_kelas = "1";
+            }
+            else if (comboBox1.SelectedIndex == 1)
+            {
+                mum2.id_kelas = "2";
+            }
+
+            Rapot mum3 = new Rapot();
+            mum3.id_siswa = idsiswa;
+            mum3.id_mapel = umum3;
+            mum3.id_rapot = idsiswa;
+            mum3.semester = smes;
+            mum3.nilai = comboBox8.SelectedItem.ToString();
+
+            if (comboBox1.SelectedIndex == 0)
+            {
+                mum3.id_kelas = "1";
+            }
+            else if (comboBox1.SelectedIndex == 1)
+            {
+                mum3.id_kelas = "2";
+            }
+
+            Rapot mum4 = new Rapot();
+            mum4.id_siswa = idsiswa;
+            mum4.id_mapel = umum4;
+            mum4.id_rapot = idsiswa;
+            mum4.semester = smes;
+            mum4.nilai = comboBox7.SelectedItem.ToString();
+
+            if (comboBox1.SelectedIndex == 0)
+            {
+                mum4.id_kelas = "1";
+            }
+            else if (comboBox1.SelectedIndex == 1)
+            {
+                mum4.id_kelas = "2";
+            }
+            //END UMUM
+
+            updateNilaiRapot(min1);
+            updateNilaiRapot(min2);
+            updateNilaiRapot(min3);
+            updateNilaiRapot(min4);
+            updateNilaiRapot(mum1);
+            updateNilaiRapot(mum2);
+            updateNilaiRapot(mum3);
+            updateNilaiRapot(mum4);
+
+
             bt_Update.Enabled = false;
             button2.Enabled = true;
             ClearForm();
+            getNilaiRapot();
         }
 
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
@@ -47,6 +213,7 @@ namespace raporkuAPP
                 return;
             //idsiswa = Convert.ToString(dataGridView1.Rows[e.RowIndex].Cells[4].Value);
             id_mapel = Convert.ToString(dataGridView2.Rows[e.RowIndex].Cells[3].Value);
+            smes = Convert.ToString(dataGridView2.Rows[e.RowIndex].Cells[1].Value);
             nilai = Convert.ToString(dataGridView2.Rows[e.RowIndex].Cells[0].Value);
             //MessageBox.Show(id_mapel + " " + nilai);
             if (id_mapel == "1" || id_mapel == "9")
@@ -183,7 +350,13 @@ namespace raporkuAPP
                 return;
             idsiswa = Convert.ToString(dataGridView1.Rows[e.RowIndex].Cells[4].Value);
             label_nama.Text = Convert.ToString(dataGridView1.Rows[e.RowIndex].Cells[3].Value);
+            getNilaiRapot();
 
+
+        }
+
+        private void getNilaiRapot()
+        {
             List<Rapot> isiswa = new List<Rapot>();
 
             String result = new WebClient().DownloadString(baseUri + "getNilaiRapot/id=" + idsiswa);
@@ -377,7 +550,7 @@ namespace raporkuAPP
             ClearForm();
         }
 
-        static void updateData(Rapot rapot)
+        static void updateNilaiRapot(Rapot rapot)
         {
             string request = JsonConvert.SerializeObject(rapot);
             WebClient client = new WebClient();
