@@ -25,6 +25,8 @@ namespace raporkuAPP
             InitializeComponent();
         }
 
+
+
         private void ReportNilai_Load(object sender, EventArgs e)
         {
             string id_kel = formMain.idkelas;
@@ -192,110 +194,110 @@ namespace raporkuAPP
             //    //ToCsV(dataGridView1, @"c:\export.xls");
             //    ToCsV(dataGridView2, sfd.FileName); // Here dataGridview1 is your grid view name
             //}
-            //if (dataGridView1.Rows.Count > 0)
-            //{
+            if (dataGridView2.Rows.Count > 0)
+            {
 
-            //    try
-            //    {
-            //        Microsoft.Office.Interop.Excel.Application ExcelApp = new Microsoft.Office.Interop.Excel.Application();
+                try
+                {
+                    Microsoft.Office.Interop.Excel.Application ExcelApp = new Microsoft.Office.Interop.Excel.Application();
 
-            //        ExcelApp.Application.Workbooks.Add(Type.Missing);
+                    ExcelApp.Application.Workbooks.Add(Type.Missing);
 
-            //        Microsoft.Office.Interop.Excel.Application xlApp;
-            //        Microsoft.Office.Interop.Excel.Workbook xlWorkBook;
-            //        Microsoft.Office.Interop.Excel.Worksheet xlWorkSheet;
-            //        object misValue = System.Reflection.Missing.Value;
+                    Microsoft.Office.Interop.Excel.Application xlApp;
+                    Microsoft.Office.Interop.Excel.Workbook xlWorkBook;
+                    Microsoft.Office.Interop.Excel.Worksheet xlWorkSheet;
+                    object misValue = System.Reflection.Missing.Value;
 
-            //        // Change properties of the Workbook 
+                    // Change properties of the Workbook 
 
-            //        ExcelApp.Columns.ColumnWidth = 20;
+                    ExcelApp.Columns.ColumnWidth = 20;
 
-            //        xlApp = new Microsoft.Office.Interop.Excel.Application();
-            //        xlWorkBook = xlApp.Workbooks.Add(misValue);
-            //        xlWorkSheet = (Microsoft.Office.Interop.Excel.Worksheet)xlWorkBook.Worksheets.get_Item(1);
+                    xlApp = new Microsoft.Office.Interop.Excel.Application();
+                    xlWorkBook = xlApp.Workbooks.Add(misValue);
+                    xlWorkSheet = (Microsoft.Office.Interop.Excel.Worksheet)xlWorkBook.Worksheets.get_Item(1);
 
-            //        // Storing header part in Excel
+                    // Storing header part in Excel
 
-            //        for (int i = 1; i <= dataGridView2.Columns.Count; i++)
-            //        {
+                    for (int i = 1; i <= dataGridView2.Columns.Count; i++)
+                    {
 
-            //            ExcelApp.Cells[1, i] = dataGridView2.Columns[i - 1].HeaderText;
+                        ExcelApp.Cells[1, i] = dataGridView2.Columns[i - 1].HeaderText;
 
-            //        }
-
-
-
-            //        // Storing Each row and column value to excel sheet
-
-            //        for (int i = 0; i <= dataGridView2.RowCount - 1; i++)
-            //        {
-            //            for (int j = 0; j <= dataGridView1.ColumnCount - 1; j++)
-            //            {
-            //                DataGridViewCell cell = dataGridView2[j, i];
-            //                ExcelApp.Cells[i + 2, j + 1] = dataGridView2.Rows[i].Cells[j].Value.ToString();
-            //            }
-            //        }
-
-            //        //for (int i = 0; i < dataGridView1.Rows.Count - 1; i++)
-            //        //{
-
-            //        //    for (int j = 0; j < dataGridView1.Columns.Count; j++)
-            //        //    {
-
-            //        //        ExcelApp.Cells[i + 2, j + 1] = dataGridView1.Rows[i].Cells[j].Value.ToString();
-
-            //        //    }
-
-            //        //}
-
-            //        xlWorkBook.SaveAs("MasterReport.xls", Microsoft.Office.Interop.Excel.XlFileFormat.xlWorkbookDefault, misValue, misValue, misValue, misValue, Microsoft.Office.Interop.Excel.XlSaveAsAccessMode.xlExclusive, misValue, misValue, misValue, misValue, misValue);
-            //        xlWorkBook.Close(true, misValue, misValue);
-            //        xlApp.Quit();
-
-            //        releaseObject(xlWorkSheet);
-            //        releaseObject(xlWorkBook);
-            //        releaseObject(xlApp);
-
-            //        //ExcelApp.ActiveWorkbook.SaveCopyAs("C:\\Report.xls");
-
-            //        //ExcelApp.ActiveWorkbook.Saved = true;
-
-            //        //ExcelApp.Quit();
-
-            //        MessageBox.Show("Excel file created , you can find the file in 'My Documents' Drive Name As MasterReport.xls", "Converted", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-            //    }
-            //    catch (Exception ex)
-            //    {
-            //        MessageBox.Show("Exception Occured while releasing object " + ex.ToString());
-            //    }
-
-            //}
-            //else
-            //{
-            //    MessageBox.Show("No Record Found to Convert, Access Denied", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
 
 
-            //}
+
+                    // Storing Each row and column value to excel sheet
+
+                    for (int i = 0; i <= dataGridView2.RowCount - 1; i++)
+                    {
+                        for (int j = 0; j <= dataGridView2.ColumnCount - 1; j++)
+                        {
+                            DataGridViewCell cell = dataGridView2[j, i];
+                            ExcelApp.Cells[i + 2, j + 1] = dataGridView2.Rows[i].Cells[j].Value.ToString();
+                        }
+                    }
+
+                    //for (int i = 0; i < dataGridView1.Rows.Count - 1; i++)
+                    //{
+
+                    //    for (int j = 0; j < dataGridView1.Columns.Count; j++)
+                    //    {
+
+                    //        ExcelApp.Cells[i + 2, j + 1] = dataGridView1.Rows[i].Cells[j].Value.ToString();
+
+                    //    }
+
+                    //}
+
+                    xlWorkBook.SaveAs("MasterReport.xls", Microsoft.Office.Interop.Excel.XlFileFormat.xlWorkbookDefault, misValue, misValue, misValue, misValue, Microsoft.Office.Interop.Excel.XlSaveAsAccessMode.xlExclusive, misValue, misValue, misValue, misValue, misValue);
+                    xlWorkBook.Close(true, misValue, misValue);
+                    xlApp.Quit();
+
+                    releaseObject(xlWorkSheet);
+                    releaseObject(xlWorkBook);
+                    releaseObject(xlApp);
+
+                    //ExcelApp.ActiveWorkbook.SaveCopyAs("C:\\Report.xls");
+
+                    //ExcelApp.ActiveWorkbook.Saved = true;
+
+                    //ExcelApp.Quit();
+
+                    MessageBox.Show("Excel file created , you can find the file in 'My Documents' Drive Name As MasterReport.xls", "Converted", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Exception Occured while releasing object " + ex.ToString());
+                }
+
+            }
+            else
+            {
+                MessageBox.Show("No Record Found to Convert, Access Denied", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+
+            }
         }
 
-        //private void releaseObject(object obj)
-        //{
-        //    try
-        //    {
-        //        System.Runtime.InteropServices.Marshal.ReleaseComObject(obj);
-        //        obj = null;
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        obj = null;
-        //        MessageBox.Show("Exception Occured while releasing object " + ex.ToString());
-        //    }
-        //    finally
-        //    {
-        //        GC.Collect();
-        //    }
-        //}
+        private void releaseObject(object obj)
+        {
+            try
+            {
+                System.Runtime.InteropServices.Marshal.ReleaseComObject(obj);
+                obj = null;
+            }
+            catch (Exception ex)
+            {
+                obj = null;
+                MessageBox.Show("Exception Occured while releasing object " + ex.ToString());
+            }
+            finally
+            {
+                GC.Collect();
+            }
+        }
 
         //private void ToCsV(DataGridView dGV, string filename)
         //{
