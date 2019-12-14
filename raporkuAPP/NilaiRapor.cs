@@ -30,14 +30,14 @@ namespace raporkuAPP
 
         private void ClearForm()
         {
-            comboBox3.SelectedValue = null;
-            comboBox4.SelectedValue = null;
-            comboBox5.SelectedValue = null;
-            comboBox6.SelectedValue = null;
-            comboBox7.SelectedValue = null;
-            comboBox8.SelectedValue = null;
-            comboBox9.SelectedValue = null;
-            comboBox10.SelectedValue = null;
+            comboBox3.Text = null;
+            comboBox4.Text = null;
+            comboBox5.Text = null;
+            comboBox6.Text = null;
+            comboBox7.Text = null;
+            comboBox8.Text = null;
+            comboBox9.Text = null;
+            comboBox10.Text = null;
             label_nama.Text = "";
         }
 
@@ -375,6 +375,16 @@ namespace raporkuAPP
             addData(mum4);
 
             ClearForm();
+        }
+
+        static void updateData(Rapot rapot)
+        {
+            string request = JsonConvert.SerializeObject(rapot);
+            WebClient client = new WebClient();
+            client.Headers.Add(HttpRequestHeader.ContentType, "application/json");
+            //client.UploadString(baseUri + "adddata", request);
+            string response = client.UploadString(baseUri + "updateNilaiRapot", request);
+            MessageBox.Show(response);
         }
     }
 }
