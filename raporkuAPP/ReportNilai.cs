@@ -92,7 +92,7 @@ namespace raporkuAPP
             String result = new WebClient().DownloadString(baseUri + "reportNilaiSiswa/ids=" + idsiswa);
 
             isiswa = JsonConvert.DeserializeObject<List<ReportNilaiSiswa>>(result);
-           
+
             //Rapot rp = new Rapot();
             //if (rp.id_mapel == "1")
             //{
