@@ -16,6 +16,7 @@ namespace raporkuAPP
     {
         public static String baseUri = Data.Uri;
         string idsiswa, kelas;
+        public static string tanggallahir;
         public inputDataSiswa()
         {
             InitializeComponent();
@@ -102,14 +103,14 @@ namespace raporkuAPP
             getData();
         }
 
-        private void getdatawali()
-        {
-            List<WaliKelas> wali = new List<WaliKelas>();
+        //private void getdatawali()
+        //{
+        //    List<WaliKelas> wali = new List<WaliKelas>();
 
-            String result = new WebClient().DownloadString(baseUri + "dataWaliKelas");
+        //    String result = new WebClient().DownloadString(baseUri + "dataWaliKelas");
 
-            wali = JsonConvert.DeserializeObject<List<WaliKelas>>(result);
-        }
+        //    wali = JsonConvert.DeserializeObject<List<WaliKelas>>(result);
+        //}
 
 
         private void button_update_Click(object sender, EventArgs e)
@@ -188,19 +189,16 @@ namespace raporkuAPP
             statuskawin_tb.Text = "";
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
 
         private void dataGridView1_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex < 0 || e.ColumnIndex < 0)
                 return;
+            int row = dataGridView1.CurrentCell.RowIndex;
             idsiswa = Convert.ToString(dataGridView1.Rows[e.RowIndex].Cells[4].Value);
             namaSiswa_TB.Text = Convert.ToString(dataGridView1.Rows[e.RowIndex].Cells[3].Value);
             tempatlahir_TB.Text = Convert.ToString(dataGridView1.Rows[e.RowIndex].Cells[0].Value);
-            tglLahir_DTP.Text = Convert.ToString(dataGridView1.Rows[e.RowIndex].Cells[1].Value);
+            tanggallahir = dataGridView1.Rows[row].Cells[1].Value.ToString();
             jeniskelamin_CB.SelectedItem = Convert.ToString(dataGridView1.Rows[e.RowIndex].Cells[9].Value);
             alamat_tb.Text = Convert.ToString(dataGridView1.Rows[e.RowIndex].Cells[6].Value);
             agama_cb.SelectedItem = Convert.ToString(dataGridView1.Rows[e.RowIndex].Cells[12].Value);
@@ -211,6 +209,9 @@ namespace raporkuAPP
             statuskawin_tb.Text = Convert.ToString(dataGridView1.Rows[e.RowIndex].Cells[10].Value);
             walikelas_cb.SelectedValue = Convert.ToString(dataGridView1.Rows[e.RowIndex].Cells[5].Value);
             kelas = Convert.ToString(dataGridView1.Rows[e.RowIndex].Cells[2].Value);
+
+            //tglLahir_DTP.Text = tanggallahir;
+            MessageBox.Show(tanggallahir);
 
             if (kelas == "1")
             {
