@@ -295,63 +295,71 @@ namespace raporkuAPP
 
         private void bt_export_Click(object sender, EventArgs e)
         {
-            copyAlltoClipboard();
-            Microsoft.Office.Interop.Excel.Application xlexcel;
-            Microsoft.Office.Interop.Excel.Workbook xlWorkBook;
-            Microsoft.Office.Interop.Excel.Worksheet xlWorkSheet;
-            object misValue = System.Reflection.Missing.Value;
-            xlexcel = new Microsoft.Office.Interop.Excel.Application();
-            xlexcel.Visible = true;
-            xlWorkBook = xlexcel.Workbooks.Add(misValue);
-            xlWorkSheet = (Microsoft.Office.Interop.Excel.Worksheet)xlWorkBook.Worksheets.get_Item(1);
-            Microsoft.Office.Interop.Excel.Range CR = (Microsoft.Office.Interop.Excel.Range)xlWorkSheet.Cells[1, 1];
-            CR.Select();
-            xlWorkSheet.PasteSpecial(CR, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, true);
-        }
-
-        private void releaseObject(object obj)
-        {
-            try
+            //copyAlltoClipboard();
+            //Microsoft.Office.Interop.Excel.Application xlexcel;
+            //Microsoft.Office.Interop.Excel.Workbook xlWorkBook;
+            //Microsoft.Office.Interop.Excel.Worksheet xlWorkSheet;
+            //object misValue = System.Reflection.Missing.Value;
+            //xlexcel = new Microsoft.Office.Interop.Excel.Application();
+            //xlexcel.Visible = true;
+            //xlWorkBook = xlexcel.Workbooks.Add(misValue);
+            //xlWorkSheet = (Microsoft.Office.Interop.Excel.Worksheet)xlWorkBook.Worksheets.get_Item(1);
+            //Microsoft.Office.Interop.Excel.Range CR = (Microsoft.Office.Interop.Excel.Range)xlWorkSheet.Cells[1, 1];
+            //CR.Select();
+            //xlWorkSheet.PasteSpecial(CR, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, true);
+            SaveFileDialog sfd = new SaveFileDialog();
+            sfd.Filter = "Excel Documents (*.xls)|*.xls";
+            sfd.FileName = "export.xls";
+            if (sfd.ShowDialog() == DialogResult.OK)
             {
-                System.Runtime.InteropServices.Marshal.ReleaseComObject(obj);
-                obj = null;
-            }
-            catch (Exception ex)
-            {
-                obj = null;
-                MessageBox.Show("Exception Occured while releasing object " + ex.ToString());
-            }
-            finally
-            {
-                GC.Collect();
+                //ToCsV(dataGridView1, @"c:\export.xls");
+                ToCsV(dataGridView2, sfd.FileName); // Here dataGridview1 is your grid view name
             }
         }
 
-        //private void ToCsV(DataGridView dGV, string filename)
+        //private void releaseObject(object obj)
         //{
-        //    string stOutput = "";
-        //    // Export titles:
-        //    string sHeaders = "";
-
-        //    for (int j = 0; j < dGV.Columns.Count; j++)
-        //        sHeaders = sHeaders.ToString() + Convert.ToString(dGV.Columns[j].HeaderText) + "\t";
-        //    stOutput += sHeaders + "\r\n";
-        //    // Export data.
-        //    for (int i = 0; i < dGV.RowCount - 1; i++)
+        //    try
         //    {
-        //        string stLine = "";
-        //        for (int j = 0; j < dGV.Rows[i].Cells.Count; j++)
-        //            stLine = stLine.ToString() + Convert.ToString(dGV.Rows[i].Cells[j].Value) + "\t";
-        //        stOutput += stLine + "\r\n";
+        //        System.Runtime.InteropServices.Marshal.ReleaseComObject(obj);
+        //        obj = null;
         //    }
-        //    Encoding utf16 = Encoding.GetEncoding(1254);
-        //    byte[] output = utf16.GetBytes(stOutput);
-        //    FileStream fs = new FileStream(filename, FileMode.Create);
-        //    BinaryWriter bw = new BinaryWriter(fs);
-        //    bw.Write(output, 0, output.Length); //write the encoded file
-        //    bw.Flush();
-        //    bw.Close();
-        //    fs.Close();
+        //    catch (Exception ex)
+        //    {
+        //        obj = null;
+        //        MessageBox.Show("Exception Occured while releasing object " + ex.ToString());
+        //    }
+        //    finally
+        //    {
+        //        GC.Collect();
+        //    }
         //}
+
+        private void ToCsV(DataGridView dGV, string filename)
+        {
+            string stOutput = "";
+            // Export titles:
+            string sHeaders = "";
+
+            for (int j = 0; j < dGV.Columns.Count; j++)
+                sHeaders = sHeaders.ToString() + Convert.ToString(dGV.Columns[j].HeaderText) + "\t";
+            stOutput += sHeaders + "\r\n";
+            // Export data.
+            for (int i = 0; i < dGV.RowCount - 1; i++)
+            {
+                string stLine = "";
+                for (int j = 0; j < dGV.Rows[i].Cells.Count; j++)
+                    stLine = stLine.ToString() + Convert.ToString(dGV.Rows[i].Cells[j].Value) + "\t";
+                stOutput += stLine + "\r\n";
+            }
+            Encoding utf16 = Encoding.GetEncoding(1254);
+            byte[] output = utf16.GetBytes(stOutput);
+            FileStream fs = new FileStream(filename, FileMode.Create);
+            BinaryWriter bw = new BinaryWriter(fs);
+            bw.Write(output, 0, output.Length); //write the encoded file
+            bw.Flush();
+            bw.Close();
+            fs.Close();
+        }
     }
 }
