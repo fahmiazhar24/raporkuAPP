@@ -30,6 +30,7 @@
         {
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.bt_export = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -38,7 +39,6 @@
             this.KELAS = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.bt_export = new System.Windows.Forms.Button();
             this.flowLayoutPanel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
@@ -74,6 +74,16 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "groupBox1";
+            // 
+            // bt_export
+            // 
+            this.bt_export.Location = new System.Drawing.Point(26, 681);
+            this.bt_export.Name = "bt_export";
+            this.bt_export.Size = new System.Drawing.Size(75, 23);
+            this.bt_export.TabIndex = 33;
+            this.bt_export.Text = "EXPORT";
+            this.bt_export.UseVisualStyleBackColor = true;
+            this.bt_export.Click += new System.EventHandler(this.bt_export_Click);
             // 
             // label2
             // 
@@ -155,15 +165,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(435, 150);
             this.dataGridView1.TabIndex = 25;
             this.dataGridView1.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentDoubleClick);
-            // 
-            // bt_export
-            // 
-            this.bt_export.Location = new System.Drawing.Point(26, 681);
-            this.bt_export.Name = "bt_export";
-            this.bt_export.Size = new System.Drawing.Size(75, 23);
-            this.bt_export.TabIndex = 33;
-            this.bt_export.Text = "EXPORT";
-            this.bt_export.UseVisualStyleBackColor = true;
             // 
             // ReportNilai
             // 
