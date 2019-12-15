@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formMain));
             this.button1 = new System.Windows.Forms.Button();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
@@ -117,7 +118,7 @@
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(148)))), ((int)(((byte)(214)))));
             this.label1.Location = new System.Drawing.Point(85, 169);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(206, 69);
+            this.label1.Size = new System.Drawing.Size(196, 64);
             this.label1.TabIndex = 16;
             this.label1.Text = "LOGIN";
             // 
@@ -150,9 +151,10 @@
             this.Controls.Add(this.textBox_);
             this.Controls.Add(this.label1);
             this.DoubleBuffered = true;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "formMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "formMain";
+            this.Text = "MAIN PAGE";
             this.ResumeLayout(false);
             this.PerformLayout();
 

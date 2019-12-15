@@ -130,7 +130,7 @@
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(148)))), ((int)(((byte)(214)))));
             this.label1.Location = new System.Drawing.Point(96, 176);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(407, 69);
+            this.label1.Size = new System.Drawing.Size(390, 64);
             this.label1.TabIndex = 24;
             this.label1.Text = "LOGIN ADMIN";
             // 
@@ -164,9 +164,10 @@
             this.Controls.Add(this.textBox_uname);
             this.Controls.Add(this.label1);
             this.DoubleBuffered = true;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "loginAdmin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "loginAdmin";
+            this.Text = "LOGIN PAGE ADMIN";
             this.ResumeLayout(false);
             this.PerformLayout();
 

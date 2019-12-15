@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(raporku));
             this.btBack = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.sidePanel = new System.Windows.Forms.Panel();
@@ -124,9 +125,10 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.nilaiRapor1);
             this.Controls.Add(this.reportNilai1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "raporku";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "raporku";
+            this.Text = "RAPORKU";
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 

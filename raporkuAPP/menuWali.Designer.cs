@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(menuWali));
             this.btDataSiswa = new System.Windows.Forms.Button();
             this.btInputRapor = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
@@ -44,6 +45,7 @@
             this.btDataSiswa.Size = new System.Drawing.Size(250, 44);
             this.btDataSiswa.TabIndex = 31;
             this.btDataSiswa.Text = "DATA SISWA";
+            this.btDataSiswa.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btDataSiswa.UseVisualStyleBackColor = false;
             this.btDataSiswa.Click += new System.EventHandler(this.btDataSiswa_Click);
             // 
@@ -54,9 +56,10 @@
             this.btInputRapor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(148)))), ((int)(((byte)(214)))));
             this.btInputRapor.Location = new System.Drawing.Point(90, 350);
             this.btInputRapor.Name = "btInputRapor";
-            this.btInputRapor.Size = new System.Drawing.Size(338, 44);
+            this.btInputRapor.Size = new System.Drawing.Size(408, 44);
             this.btInputRapor.TabIndex = 32;
             this.btInputRapor.Text = "INPUT DATA RAPOR";
+            this.btInputRapor.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btInputRapor.UseVisualStyleBackColor = false;
             this.btInputRapor.Click += new System.EventHandler(this.btInputRapor_Click);
             // 
@@ -67,9 +70,10 @@
             this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(148)))), ((int)(((byte)(214)))));
             this.button1.Location = new System.Drawing.Point(90, 506);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(183, 44);
+            this.button1.Size = new System.Drawing.Size(170, 44);
             this.button1.TabIndex = 33;
             this.button1.Text = "LOGOUT";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -97,9 +101,10 @@
             this.Controls.Add(this.btInputRapor);
             this.Controls.Add(this.btDataSiswa);
             this.DoubleBuffered = true;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "menuWali";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "menuAdmin";
+            this.Text = "MENU WALI KELAS";
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -25,6 +25,7 @@ namespace raporkuAPP
             //InitializeComponent();
             //t.Abort();
 
+            //splashscreen
             if (menuWali.cekLog == "1")
             {
                 InitializeComponent();
@@ -39,6 +40,7 @@ namespace raporkuAPP
             }
         }
 
+        //run splash screen
         public void StartForm()
         {
             Application.Run(new splashScreen());
@@ -56,6 +58,7 @@ namespace raporkuAPP
 
         }
 
+        //login wali kelas
         private void button1_Click(object sender, EventArgs e)
         {
             try

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formAdmin));
             this.panel1 = new System.Windows.Forms.Panel();
             this.btOut = new System.Windows.Forms.Button();
             this.sidePanel = new System.Windows.Forms.Panel();
@@ -125,9 +126,10 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.inputDataWali1);
             this.Controls.Add(this.inputDataSiswa1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "formAdmin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "formAdmin";
+            this.Text = "ADMIN PAGE";
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
