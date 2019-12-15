@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace raporkuAPP
 {
-    public partial class splashScreen : Form
+    public partial class splashScreen : MaterialSkin.Controls.MaterialForm
     {
         public splashScreen()
         {
