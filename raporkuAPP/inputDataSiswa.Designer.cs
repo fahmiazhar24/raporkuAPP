@@ -31,7 +31,6 @@
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.bt_Cancel = new System.Windows.Forms.Button();
-            this.tglLahir_DTP = new System.Windows.Forms.DateTimePicker();
             this.label12 = new System.Windows.Forms.Label();
             this.kelas_cb = new System.Windows.Forms.ComboBox();
             this.label11 = new System.Windows.Forms.Label();
@@ -59,6 +58,7 @@
             this.jeniskelamin_CB = new System.Windows.Forms.ComboBox();
             this.tempatlahir_TB = new System.Windows.Forms.TextBox();
             this.namaSiswa_TB = new System.Windows.Forms.TextBox();
+            this.tglLahir_DTP = new System.Windows.Forms.DateTimePicker();
             this.flowLayoutPanel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -79,8 +79,8 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.bt_Cancel);
             this.groupBox1.Controls.Add(this.tglLahir_DTP);
+            this.groupBox1.Controls.Add(this.bt_Cancel);
             this.groupBox1.Controls.Add(this.label12);
             this.groupBox1.Controls.Add(this.kelas_cb);
             this.groupBox1.Controls.Add(this.label11);
@@ -127,14 +127,6 @@
             this.bt_Cancel.Text = "Cancel";
             this.bt_Cancel.UseVisualStyleBackColor = true;
             this.bt_Cancel.Click += new System.EventHandler(this.bt_Cancel_Click);
-            // 
-            // tglLahir_DTP
-            // 
-            this.tglLahir_DTP.Location = new System.Drawing.Point(161, 155);
-            this.tglLahir_DTP.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tglLahir_DTP.Name = "tglLahir_DTP";
-            this.tglLahir_DTP.Size = new System.Drawing.Size(301, 22);
-            this.tglLahir_DTP.TabIndex = 50;
             // 
             // label12
             // 
@@ -400,6 +392,16 @@
             this.namaSiswa_TB.Size = new System.Drawing.Size(301, 22);
             this.namaSiswa_TB.TabIndex = 22;
             // 
+            // tglLahir_DTP
+            // 
+            this.tglLahir_DTP.CustomFormat = "MM/dd/yyyy";
+            this.tglLahir_DTP.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.tglLahir_DTP.Location = new System.Drawing.Point(161, 155);
+            this.tglLahir_DTP.Name = "tglLahir_DTP";
+            this.tglLahir_DTP.Size = new System.Drawing.Size(301, 22);
+            this.tglLahir_DTP.TabIndex = 52;
+            this.tglLahir_DTP.Value = new System.DateTime(2019, 11, 12, 0, 0, 0, 0);
+            // 
             // inputDataSiswa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -448,7 +450,7 @@
         private System.Windows.Forms.TextBox ayah_tb;
         private System.Windows.Forms.TextBox ibu_tb;
         private System.Windows.Forms.TextBox alamat_tb;
-        private System.Windows.Forms.DateTimePicker tglLahir_DTP;
         private System.Windows.Forms.Button bt_Cancel;
+        private System.Windows.Forms.DateTimePicker tglLahir_DTP;
     }
 }

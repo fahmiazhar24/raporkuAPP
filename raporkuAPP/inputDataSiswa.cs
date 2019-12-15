@@ -163,6 +163,7 @@ namespace raporkuAPP
             walikelas_cb.DisplayMember = "nama_walikelas";
             walikelas_cb.ValueMember = "id_walikelas";
             /////////////////////
+            ///
         }
 
         private void walikelas_cb_SelectedIndexChanged(object sender, EventArgs e)
@@ -194,16 +195,17 @@ namespace raporkuAPP
         {
             if (e.RowIndex < 0 || e.ColumnIndex < 0)
                 return;
-            int row = dataGridView1.CurrentCell.RowIndex;
             idsiswa = Convert.ToString(dataGridView1.Rows[e.RowIndex].Cells[4].Value);
             namaSiswa_TB.Text = Convert.ToString(dataGridView1.Rows[e.RowIndex].Cells[3].Value);
             tempatlahir_TB.Text = Convert.ToString(dataGridView1.Rows[e.RowIndex].Cells[0].Value);
-            tanggallahir = dataGridView1.Rows[row].Cells[1].Value.ToString();
+            //tanggallahir = dataGridView1.Rows[row].Cells[1].Value.ToString();
+            tglLahir_DTP.Value = Convert.ToDateTime(dataGridView1.Rows[e.RowIndex].Cells[1].Value);
             jeniskelamin_CB.SelectedItem = Convert.ToString(dataGridView1.Rows[e.RowIndex].Cells[9].Value);
             alamat_tb.Text = Convert.ToString(dataGridView1.Rows[e.RowIndex].Cells[6].Value);
             agama_cb.SelectedItem = Convert.ToString(dataGridView1.Rows[e.RowIndex].Cells[12].Value);
             ibu_tb.Text = Convert.ToString(dataGridView1.Rows[e.RowIndex].Cells[7].Value);
-            ayah_tb.Text = Convert.ToString(dataGridView1.Rows[e.RowIndex].Cells[11].Value);
+            //ayah_tb.Text = Convert.ToString(dataGridView1.Rows[e.RowIndex].Cells[11].Value);
+            ayah_tb.Text = Convert.ToString(dataGridView1.Rows[e.RowIndex].Cells[1].Value);
             namaSiswa_TB.Text = Convert.ToString(dataGridView1.Rows[e.RowIndex].Cells[3].Value);
             nomorortu_tb.Text = Convert.ToString(dataGridView1.Rows[e.RowIndex].Cells[8].Value);
             statuskawin_tb.Text = Convert.ToString(dataGridView1.Rows[e.RowIndex].Cells[10].Value);
@@ -211,7 +213,7 @@ namespace raporkuAPP
             kelas = Convert.ToString(dataGridView1.Rows[e.RowIndex].Cells[2].Value);
 
             //tglLahir_DTP.Text = tanggallahir;
-            MessageBox.Show(tanggallahir);
+            //MessageBox.Show(tanggallahir);
 
             if (kelas == "1")
             {
