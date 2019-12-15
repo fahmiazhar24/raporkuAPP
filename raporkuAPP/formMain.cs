@@ -25,7 +25,7 @@ namespace raporkuAPP
             //InitializeComponent();
             //t.Abort();
 
-            if (menuWali.cekLog == "1")
+            if (menuWali.cekLog == "1" || formAdmin.cekLog == "1")
             {
                 InitializeComponent();
             }
