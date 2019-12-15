@@ -18,7 +18,7 @@ namespace raporkuAPP
 {
     public partial class ReportNilai : UserControl
     {
-        string idkelas, idsiswa, namasiswa;
+        string idkelas, idsiswa, namasiswa, kelassiswa;
         public static String baseUri = Data.Uri;
         public ReportNilai()
         {
@@ -86,6 +86,7 @@ namespace raporkuAPP
                 return;
             idsiswa = Convert.ToString(dataGridView1.Rows[e.RowIndex].Cells[4].Value);
             namasiswa = Convert.ToString(dataGridView1.Rows[e.RowIndex].Cells[3].Value);
+            kelassiswa = Convert.ToString(dataGridView1.Rows[e.RowIndex].Cells[2].Value);
             //label_nama.Text = Convert.ToString(dataGridView1.Rows[e.RowIndex].Cells[3].Value);
 
             List<ReportNilaiSiswa> isiswa = new List<ReportNilaiSiswa>();
@@ -126,7 +127,7 @@ namespace raporkuAPP
         {
             List<ReportNilaiSiswa> isiswa = new List<ReportNilaiSiswa>();
 
-            String result = new WebClient().DownloadString(baseUri + "filterSemesterv2/Semester=" + comboBox2.Text);
+            String result = new WebClient().DownloadString(baseUri + "filterSemesterv2/Semester=" + comboBox2.Text + "/kelas=" + kelassiswa);
 
             isiswa = JsonConvert.DeserializeObject<List<ReportNilaiSiswa>>(result);
 
